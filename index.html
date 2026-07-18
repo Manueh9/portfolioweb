@@ -80,6 +80,37 @@
   @keyframes tcBadge{0%,34%{opacity:0;transform:translate(-50%,-50%) scale(.6) rotate(-7deg)}43%{opacity:1;transform:translate(-50%,-50%) scale(1.12) rotate(-7deg)}50%{transform:translate(-50%,-50%) scale(1) rotate(-7deg)}86%{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-7deg)}96%,100%{opacity:0;transform:translate(-50%,-50%) scale(1) rotate(-7deg)}}
   @media (prefers-reduced-motion: reduce){.tc-scan,.tc-fill{display:none}.tc-badge{opacity:1;animation:none;transform:translate(-50%,-50%) scale(1) rotate(-7deg)}}
 
+  /* ===== animación MailCraft (email redactándose con IA) ===== */
+  .mc-art{background:radial-gradient(120% 120% at 50% -10%,#1c2748 0%,#121a2e 55%,#0d1322 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .mc-stage{position:relative;width:262px;max-width:84%}
+  .mc-win{background:#0f1626;border:1px solid rgba(255,255,255,.10);border-radius:12px;overflow:hidden;box-shadow:0 22px 48px -22px rgba(0,0,0,.6)}
+  .mc-bar{display:flex;align-items:center;gap:6px;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
+  .mc-dot{width:9px;height:9px;border-radius:50%}
+  .mc-ia{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.04em;color:#8ab4ff;display:inline-flex;align-items:center;gap:4px;border:1px solid rgba(138,180,255,.3);border-radius:999px;padding:2px 7px;animation:mcGlow 2.6s ease-in-out infinite}
+  .mc-fields{padding:12px 14px 6px;display:flex;flex-direction:column;gap:7px}
+  .mc-field{font-family:'JetBrains Mono',monospace;font-size:10px;color:#c7cede;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mc-lbl{color:#6b7590;display:inline-block;width:44px}
+  .mc-body{padding:9px 14px 16px;display:flex;flex-direction:column;gap:8px;position:relative;min-height:74px}
+  .mc-line{height:7px;border-radius:4px;background:linear-gradient(90deg,rgba(79,140,255,.6),rgba(79,140,255,.22));width:0}
+  .mc-line.l1{animation:mcL1 5.4s cubic-bezier(.4,0,.2,1) infinite}
+  .mc-line.l2{animation:mcL2 5.4s cubic-bezier(.4,0,.2,1) infinite}
+  .mc-line.l3{animation:mcL3 5.4s cubic-bezier(.4,0,.2,1) infinite}
+  .mc-line.l4{animation:mcL4 5.4s cubic-bezier(.4,0,.2,1) infinite}
+  .mc-caret{position:absolute;left:14px;bottom:16px;width:2px;height:12px;background:#8ab4ff;animation:mcCaret 1s step-end infinite}
+  @keyframes mcL1{0%{width:0}3%{width:0}17%{width:94%}90%{width:94%}96%{width:0}100%{width:0}}
+  @keyframes mcL2{0%{width:0}19%{width:0}33%{width:78%}90%{width:78%}96%{width:0}100%{width:0}}
+  @keyframes mcL3{0%{width:0}35%{width:0}49%{width:88%}90%{width:88%}96%{width:0}100%{width:0}}
+  @keyframes mcL4{0%{width:0}51%{width:0}64%{width:52%}90%{width:52%}96%{width:0}100%{width:0}}
+  @keyframes mcCaret{0%,50%{opacity:1}51%,100%{opacity:0}}
+  @keyframes mcGlow{0%,100%{box-shadow:0 0 0 0 rgba(138,180,255,0)}50%{box-shadow:0 0 10px 0 rgba(138,180,255,.35)}}
+  @media (prefers-reduced-motion: reduce){.mc-line{animation:none}.mc-line.l1{width:94%}.mc-line.l2{width:78%}.mc-line.l3{width:88%}.mc-line.l4{width:52%}.mc-caret,.mc-ia{animation:none}}
+
+  /* ===== botones de tarjeta diferenciados ===== */
+  .btn-open{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:500;padding:8px 14px;border-radius:10px;background:var(--accent);color:#fff !important;text-decoration:none;border:1px solid var(--accent);cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
+  .btn-open:hover{transform:translateY(-2px);box-shadow:0 9px 22px -9px var(--glow);filter:brightness(1.06)}
+  .btn-detail{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:500;padding:8px 14px;border-radius:10px;background:var(--surface2);color:var(--text);border:1px solid var(--border);cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;transition:border-color .18s ease,background .18s ease}
+  .btn-detail:hover{border-color:var(--accent);background:rgba(127,127,127,.08)}
+
   @media (max-width:760px){
     .hero-grid{grid-template-columns:1fr !important}
     .hero-intro{grid-column:1 / -1 !important;grid-row:auto !important;padding:30px !important}
@@ -89,6 +120,8 @@
     .featured-art{min-height:170px !important}
     .tc-art{min-height:248px !important}
     .tc-stage{width:190px}
+    .mc-art{min-height:232px !important}
+    .mc-stage{width:224px}
     .others-grid{grid-template-columns:1fr !important}
     .stack-grid{grid-template-columns:1fr 1fr !important}
     .certs-grid{grid-template-columns:1fr !important}
@@ -299,6 +332,7 @@ const PROJECTS = [
   },
   {
     id: 'mailcraft',
+    art: 'mailcraft',
     name: 'MailCraft',
     mono: 'MC',
     year: '2026',
@@ -351,17 +385,30 @@ const CERT_ANIM = `
     <div class="tc-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Verificado</div>
   </div>`;
 
-/* ---- tu trayectoria (timeline con botón "ver detalle") ---- */
+/* ---- animación de MailCraft (email redactándose con IA) ---- */
+const MAIL_ANIM = `
+  <div class="mc-stage">
+    <div class="mc-win">
+      <div class="mc-bar">
+        <span class="mc-dot" style="background:#ff5f57"></span>
+        <span class="mc-dot" style="background:#febc2e"></span>
+        <span class="mc-dot" style="background:#28c840"></span>
+        <span class="mc-ia">✦ IA</span>
+      </div>
+      <div class="mc-fields">
+        <div class="mc-field"><span class="mc-lbl">Para</span>cliente@empresa.com</div>
+        <div class="mc-field"><span class="mc-lbl">Asunto</span>Propuesta de colaboración</div>
+      </div>
+      <div class="mc-body">
+        <span class="mc-line l1"></span>
+        <span class="mc-line l2"></span>
+        <span class="mc-line l3"></span>
+        <span class="mc-line l4"></span>
+        <span class="mc-caret"></span>
+      </div>
+    </div>
+  </div>`;
 const TIMELINE = [
-  {
-    id: 'tl-proyectos',
-    period: 'hoy',
-    title: 'Proyectos propios monetizables',
-    subtitle: null,
-    short: 'Construyo productos web propios de la idea al deploy. trycert, un servicio de certificados verificables, es el primero: desplegado en producción y funcional de punta a punta.',
-    anchor: '#proyectos',
-    anchorLabel: 'ver proyectos'
-  },
   {
     id: 'tl-job',
     period: '2023 — actualidad',
@@ -414,10 +461,14 @@ function schip(t){
   return '<span class="stack-chip" style="font-family:\'JetBrains Mono\',monospace;font-size:11px;padding:5px 9px;border:1px solid var(--border);border-radius:7px;color:var(--muted);background:var(--surface2)">'+t+'</span>';
 }
 
+/* ---- animaciones de proyecto (según p.art) ---- */
+function artFor(p){ return p.art === 'trycert' ? CERT_ANIM : p.art === 'mailcraft' ? MAIL_ANIM : ''; }
+function artClass(p){ return p.art === 'trycert' ? 'tc-art' : p.art === 'mailcraft' ? 'mc-art' : ''; }
+
 /* ---- proyecto destacado ---- */
 function renderFeatured(p){
-  const art = p.art === 'trycert'
-    ? `<div class="featured-art tc-art" style="min-height:300px">${CERT_ANIM}</div>`
+  const art = p.art
+    ? `<div class="featured-art ${artClass(p)}" style="min-height:300px">${artFor(p)}</div>`
     : `<div class="featured-art" style="position:relative;background:var(--surface2);min-height:280px;background-image:repeating-linear-gradient(135deg,var(--border) 0,var(--border) 1px,transparent 1px,transparent 13px);display:flex;align-items:center;justify-content:center"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);background:var(--surface);padding:8px 14px;border-radius:8px;border:1px solid var(--border)">[ captura del producto ]</span></div>`;
   document.getElementById('featured').innerHTML = `
     <article class="featured featured-grid" data-proj-id="${p.id}" style="background:var(--surface);border:1px solid var(--border);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1.05fr 1fr;gap:0;margin-bottom:18px">
@@ -431,9 +482,9 @@ function renderFeatured(p){
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:2px">${p.tags.map(tag).join('')}</div>
         <div style="display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:18px">
           <div><span style="font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;color:var(--text)">${p.metric}</span> <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">${p.metricLabel}</span></div>
-          <div style="display:flex;align-items:center;gap:16px">
-            ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="cardlink" style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);text-decoration:none;font-weight:500">ver proyecto ↗</a>` : ''}
-            <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted);font-weight:500">ver detalle →</span>
+          <div style="display:flex;align-items:center;gap:10px">
+            ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="btn-open">ver proyecto ↗</a>` : ''}
+            <span class="btn-detail">ver detalle →</span>
           </div>
         </div>
       </div>
@@ -442,6 +493,39 @@ function renderFeatured(p){
 }
 
 /* ---- otros proyectos ---- */
+function compactCard(p){
+  return `<article class="proj" data-proj-id="${p.id}" style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:15px">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div style="width:42px;height:42px;border-radius:12px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--accent);font-size:14px">${p.mono}</div>
+        <div style="display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)"><span style="width:7px;height:7px;border-radius:50%;background:${p.statusColor}"></span>${p.status}</div>
+      </div>
+      <h3 style="font-size:21px;font-weight:600;letter-spacing:-.015em;margin:2px 0 0">${p.name}</h3>
+      <p style="font-size:14.5px;line-height:1.55;color:var(--muted);margin:0;flex:1">${p.tagline}</p>
+      <div style="display:flex;gap:7px;flex-wrap:wrap">${p.tags.map(schip).join('')}</div>
+      <div style="display:flex;align-items:center;gap:10px;border-top:1px solid var(--border);padding-top:14px">
+        ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="btn-open">ver proyecto ↗</a>` : ''}
+        <span class="btn-detail">ver detalle →</span>
+      </div>
+    </article>`;
+}
+function wideCard(p){
+  return `<article class="proj featured-grid" data-proj-id="${p.id}" style="grid-column:1 / -1;background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;gap:0">
+      <div style="padding:30px 32px;display:flex;flex-direction:column;gap:13px">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div style="display:flex;align-items:center;gap:12px"><div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;color:#fff;font-size:15px">${p.mono}</div><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">${p.year}</div></div>
+          <div style="display:flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:12px;color:${p.statusColor}"><span style="width:8px;height:8px;border-radius:50%;background:${p.statusColor}"></span>${p.status}</div>
+        </div>
+        <h3 style="font-size:24px;font-weight:600;letter-spacing:-.015em;margin:2px 0 0">${p.name}</h3>
+        <p style="font-size:15px;line-height:1.55;color:var(--muted);margin:0">${p.tagline}</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">${p.tags.map(schip).join('')}</div>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:16px">
+          ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="btn-open">ver proyecto ↗</a>` : ''}
+          <span class="btn-detail">ver detalle →</span>
+        </div>
+      </div>
+      <div class="featured-art ${artClass(p)}" style="min-height:250px">${artFor(p)}</div>
+    </article>`;
+}
 function renderOthers(list){
   const grid = document.getElementById('others-grid');
   if(!list.length){
@@ -451,20 +535,7 @@ function renderOthers(list){
       </div>`;
     return;
   }
-  grid.innerHTML = list.map(p => `
-    <article class="proj" data-proj-id="${p.id}" style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:15px">
-      <div style="display:flex;align-items:center;justify-content:space-between">
-        <div style="width:42px;height:42px;border-radius:12px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--accent);font-size:14px">${p.mono}</div>
-        <div style="display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)"><span style="width:7px;height:7px;border-radius:50%;background:${p.statusColor}"></span>${p.status}</div>
-      </div>
-      <h3 style="font-size:21px;font-weight:600;letter-spacing:-.015em;margin:2px 0 0">${p.name}</h3>
-      <p style="font-size:14.5px;line-height:1.55;color:var(--muted);margin:0;flex:1">${p.tagline}</p>
-      <div style="display:flex;gap:7px;flex-wrap:wrap">${p.tags.map(schip).join('')}</div>
-      <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:14px">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text)"><span style="font-weight:700">${p.metric}</span> <span style="color:var(--muted);font-size:11px">${p.metricLabel}</span></div>
-        ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="cardlink" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);text-decoration:none;font-weight:500">ver proyecto ↗</a>` : `<span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent)">→</span>`}
-      </div>
-    </article>`).join('');
+  grid.innerHTML = list.map(p => p.art ? wideCard(p) : compactCard(p)).join('');
 }
 
 /* ---- modal ---- */
@@ -511,7 +582,7 @@ function certCardHTML(c, i){
     </div>
     <div style="font-size:16.5px;font-weight:600;line-height:1.3">${c.title}</div>
     <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">${c.issuer}${c.meta ? ' · ' + c.meta : ''}</div>
-    <div style="display:flex;flex-wrap:wrap;gap:6px">${c.skills.map(chip).join('')}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px">${c.skills.map(schip).join('')}</div>
     <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:13px;margin-top:2px">
       <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);opacity:.75">ID · ${c.id}</span>
       <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);font-weight:500">ver detalle →</span>
@@ -532,7 +603,7 @@ function openCert(i){
       <h3 style="font-size:24px;font-weight:700;letter-spacing:-.015em;line-height:1.2;margin:20px 0 0;padding-right:20px">${c.title}</h3>
       <p style="font-size:15.5px;line-height:1.7;color:var(--text);margin:16px 0 0">${c.desc}</p>
       <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;margin:28px 0 14px">// aptitudes</div>
-      <div style="display:flex;flex-wrap:wrap;gap:7px">${c.skills.map(chip).join('')}</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px">${c.skills.map(schip).join('')}</div>
       <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);margin-top:24px;opacity:.8">ID de credencial · ${c.id}</div>
       ${c.url ? `<div style="margin-top:26px"><a href="${c.url}" target="_blank" rel="noopener" class="mlink" style="font-family:'JetBrains Mono',monospace;font-size:14px;padding:12px 20px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:500;display:inline-block">ver curso ↗</a></div>` : ''}
     </div>`;
@@ -587,15 +658,15 @@ function openModal(id){
   const stackHtml = p.stack.map(g => `
     <div style="display:flex;gap:16px;align-items:baseline;flex-wrap:wrap">
       <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);width:110px;flex-shrink:0">${g.label}</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;flex:1">${g.items.map(it => `<span style="font-family:'JetBrains Mono',monospace;font-size:12px;padding:6px 11px;border:1px solid var(--border);border-radius:8px;color:var(--text);background:var(--surface2)">${it}</span>`).join('')}</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;flex:1">${g.items.map(it => `<span class="stack-chip" style="font-family:'JetBrains Mono',monospace;font-size:12px;padding:6px 11px;border:1px solid var(--border);border-radius:8px;color:var(--text);background:var(--surface2)">${it}</span>`).join('')}</div>
     </div>`).join('');
 
   let links = '';
   if(p.demo)   links += `<a href="${p.demo}" target="_blank" rel="noopener" class="mlink" style="font-family:'JetBrains Mono',monospace;font-size:14px;padding:13px 22px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:500">ver proyecto ↗</a>`;
   if(p.github) links += `<a href="${p.github}" target="_blank" rel="noopener" class="mlink" style="font-family:'JetBrains Mono',monospace;font-size:14px;padding:13px 22px;border-radius:12px;background:var(--surface2);color:var(--text);text-decoration:none;font-weight:500;border:1px solid var(--border)">código ↗</a>`;
 
-  const header = p.art === 'trycert'
-    ? `<div class="tc-art" style="position:relative;height:250px;display:flex;align-items:center;justify-content:center">${CERT_ANIM}<button id="modal-close" class="closebtn" aria-label="Cerrar" style="position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:11px;border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;z-index:10">✕</button></div>`
+  const header = p.art
+    ? `<div class="${artClass(p)}" style="position:relative;height:250px;display:flex;align-items:center;justify-content:center">${artFor(p)}<button id="modal-close" class="closebtn" aria-label="Cerrar" style="position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:11px;border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;z-index:10">✕</button></div>`
     : `<div style="position:relative;height:180px;background:var(--surface2);background-image:repeating-linear-gradient(135deg,var(--border) 0,var(--border) 1px,transparent 1px,transparent 14px);display:flex;align-items:center;justify-content:center"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);background:var(--surface);padding:8px 14px;border-radius:8px;border:1px solid var(--border)">[ captura · ${p.name} ]</span><button id="modal-close" class="closebtn" aria-label="Cerrar" style="position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:11px;border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;z-index:10">✕</button></div>`;
   modalCard.innerHTML = `
     ${header}
