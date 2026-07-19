@@ -344,7 +344,7 @@ const PROJECTS = [
     metricLabel: 'en desarrollo',
     tags: ['Next.js', 'TypeScript', 'Tailwind', 'IA'],
     role: 'creador · full-stack',
-    demo: 'https://email-generator-tawny.vercel.app/',                                // 👉 pon aquí la URL cuando quieras enlazar el proyecto
+    demo: '',                                // 👉 pon aquí la URL cuando quieras enlazar el proyecto
     github: '',
     features: [
       'Genera emails profesionales a partir de unas pocas indicaciones',
@@ -515,7 +515,6 @@ function wideCard(p){
         <p style="font-size:15px;line-height:1.55;color:var(--muted);margin:0">${p.tagline}</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap">${p.tags.map(schip).join('')}</div>
         <div style="display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:16px">
-          ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="btn-open">ver proyecto ↗</a>` : ''}
           <span class="btn-detail">ver detalle →</span>
         </div>
       </div>
