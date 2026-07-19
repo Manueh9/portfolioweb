@@ -500,7 +500,6 @@ function compactCard(p){
       <p style="font-size:14.5px;line-height:1.55;color:var(--muted);margin:0;flex:1">${p.tagline}</p>
       <div style="display:flex;gap:7px;flex-wrap:wrap">${p.tags.map(schip).join('')}</div>
       <div style="display:flex;align-items:center;gap:10px;border-top:1px solid var(--border);padding-top:14px">
-        ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="btn-open">ver proyecto ↗</a>` : ''}
         <span class="btn-detail">ver detalle →</span>
       </div>
     </article>`;
