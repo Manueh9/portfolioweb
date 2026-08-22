@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Manuel García — Web Full-Stack Developer</title>
-<meta name="description" content="Manuel García Rodríguez · Desarrollador Web Full-Stack especializado en Back-End y bases de datos.">
+<title>Manuel García — Desarrollador .NET · Cloud/DevOps</title>
+<meta name="description" content="Manuel García Rodríguez · Desarrollador .NET. Del código a producción: backend, APIs, SQL Server e infraestructura (Docker, CI/CD, Azure).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -237,7 +237,7 @@
         </div>
         <div class="stackcard" data-reveal="210" style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:26px">
           <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:18px">// infra & deploy</div>
-          <div style="display:flex;flex-direction:column;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--text)"><span>Docker</span><span>Caddy</span><span>Cloudflare</span><span>Vercel</span><span>Git</span><span>Azure</span></div>
+          <div style="display:flex;flex-direction:column;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--text)"><span>Docker</span><span>CI/CD</span><span>GitHub Actions</span><span>Azure</span><span>Linux</span><span>Caddy</span><span>Cloudflare</span><span>Git</span></div>
         </div>
       </div>
     </section>
@@ -329,36 +329,33 @@ const PROJECTS = [
       { label: 'Infra & deploy', items: ['Docker', 'Caddy 2', 'Cloudflare', 'Hetzner', 'Resend'] }
     ]
   }
-/*  {
-    id: 'mailcraft',
-    art: 'mailcraft',
-    name: 'MailCraft',
-    mono: 'MC',
-    year: '2026',
-    tagline: 'Generador de emails profesionales con IA, con redacción en tiempo real.',
-    desc: 'Aplicación web que genera emails profesionales a partir de unas pocas indicaciones. La respuesta se escribe en tiempo real (streaming), permite elegir plantillas y tono, y refinar el resultado generado con un solo clic.',
-    status: 'En desarrollo',
-    statusColor: '#fbbf24',
-    metric: 'MVP',
-    metricLabel: 'en desarrollo',
-    tags: ['Next.js', 'TypeScript', 'Tailwind', 'IA'],
-    role: 'creador · full-stack',
-    demo: '',                                // 👉 pon aquí la URL cuando quieras enlazar el proyecto
-    github: '',
-    features: [
-      'Genera emails profesionales a partir de unas pocas indicaciones',
-      'Redacción en streaming: el email se escribe en tiempo real',
-      'Plantillas y tono configurables',
-      'Refinado del resultado con un clic',
-      'Tema claro / oscuro'
-    ],
-    stack: [
-      { label: 'Front-end', items: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'] },
-      { label: 'IA', items: ['Generación por streaming'] },
-      { label: 'Deploy', items: ['Vercel', 'Git'] }
-    ]
+  {
+   id: 'devopskit',
+   name: 'DevOps KIT CLI',
+   mono: 'DK',
+   year: '2026',
+   tagline: 'Herramienta CLI en Python que agrupa utilidades para automatizar tareas de DevOps.',
+   desc: 'DevOps KIT CLI es una herramienta de línea de comandos en Python que reúne utilidades para automatizar tareas habituales de DevOps: gestión de contenedores, despliegues y operaciones repetitivas. Pensada para acelerar el día a día con comandos simples y reutilizables.',
+   status: 'En desarrollo',
+   statusColor: '#fbbf24',
+   metric: 'v1',
+   metricLabel: 'primera versión',
+   tags: ['Python', 'CLI', 'Typer', 'Docker'],
+   role: 'creador',
+   demo: '',
+   github: 'https://github.com/Manueh9/DEVOPS-KIT-CLI',   // repo publico
+   features: [
+     'Utilidades de automatización agrupadas en una sola CLI',
+     'Comandos para gestión de contenedores Docker',
+     'Automatización de tareas de despliegue y operación',
+     'Empaquetado e instalable con pip'
+   ],
+   stack: [
+     { label: 'Lenguaje', items: ['Python'] },
+     { label: 'CLI & tooling', items: ['Typer', 'pytest'] },
+     { label: 'Integraciones', items: ['Docker'] }
+   ]
   }
- */
 ];
 
 /* ---- animación del certificado trycert (HTML reutilizable) ---- */
@@ -766,9 +763,9 @@ function typeTerminal(){
   if(!el) return;
   const lines = [
     { p:'$ ', t:'whoami' },
-    { o:'manuel garcía · web full-stack developer' },
+    { o:'manuel garcía · desarrollador .net' },
     { p:'$ ', t:'cat especialidad.txt' },
-    { o:'back-end & bases de datos · C# / .NET / SQL' },
+    { o:'del código a producción · C# / .NET / SQL / Docker / CI/CD' },
     { p:'$ ', t:'cat disponibilidad.txt' },
     { o:'abierto a nuevas oportunidades ▍' }
   ];
