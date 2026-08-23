@@ -80,30 +80,56 @@
   @keyframes tcBadge{0%,34%{opacity:0;transform:translate(-50%,-50%) scale(.6) rotate(-7deg)}43%{opacity:1;transform:translate(-50%,-50%) scale(1.12) rotate(-7deg)}50%{transform:translate(-50%,-50%) scale(1) rotate(-7deg)}86%{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-7deg)}96%,100%{opacity:0;transform:translate(-50%,-50%) scale(1) rotate(-7deg)}}
   @media (prefers-reduced-motion: reduce){.tc-scan,.tc-fill{display:none}.tc-badge{opacity:1;animation:none;transform:translate(-50%,-50%) scale(1) rotate(-7deg)}}
 
-  /* ===== animación MailCraft (email redactándose con IA) ===== */
-  .mc-art{background:radial-gradient(120% 120% at 50% -10%,#1c2748 0%,#121a2e 55%,#0d1322 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-  .mc-stage{position:relative;width:262px;max-width:84%}
-  .mc-win{background:#0f1626;border:1px solid rgba(255,255,255,.10);border-radius:12px;overflow:hidden;box-shadow:0 22px 48px -22px rgba(0,0,0,.6)}
-  .mc-bar{display:flex;align-items:center;gap:6px;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
-  .mc-dot{width:9px;height:9px;border-radius:50%}
-  .mc-ia{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.04em;color:#8ab4ff;display:inline-flex;align-items:center;gap:4px;border:1px solid rgba(138,180,255,.3);border-radius:999px;padding:2px 7px;animation:mcGlow 2.6s ease-in-out infinite}
-  .mc-fields{padding:12px 14px 6px;display:flex;flex-direction:column;gap:7px}
-  .mc-field{font-family:'JetBrains Mono',monospace;font-size:10px;color:#c7cede;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .mc-lbl{color:#6b7590;display:inline-block;width:44px}
-  .mc-body{padding:9px 14px 16px;display:flex;flex-direction:column;gap:8px;position:relative;min-height:74px}
-  .mc-line{height:7px;border-radius:4px;background:linear-gradient(90deg,rgba(79,140,255,.6),rgba(79,140,255,.22));width:0}
-  .mc-line.l1{animation:mcL1 5.4s cubic-bezier(.4,0,.2,1) infinite}
-  .mc-line.l2{animation:mcL2 5.4s cubic-bezier(.4,0,.2,1) infinite}
-  .mc-line.l3{animation:mcL3 5.4s cubic-bezier(.4,0,.2,1) infinite}
-  .mc-line.l4{animation:mcL4 5.4s cubic-bezier(.4,0,.2,1) infinite}
-  .mc-caret{position:absolute;left:14px;bottom:16px;width:2px;height:12px;background:#8ab4ff;animation:mcCaret 1s step-end infinite}
-  @keyframes mcL1{0%{width:0}3%{width:0}17%{width:94%}90%{width:94%}96%{width:0}100%{width:0}}
-  @keyframes mcL2{0%{width:0}19%{width:0}33%{width:78%}90%{width:78%}96%{width:0}100%{width:0}}
-  @keyframes mcL3{0%{width:0}35%{width:0}49%{width:88%}90%{width:88%}96%{width:0}100%{width:0}}
-  @keyframes mcL4{0%{width:0}51%{width:0}64%{width:52%}90%{width:52%}96%{width:0}100%{width:0}}
-  @keyframes mcCaret{0%,50%{opacity:1}51%,100%{opacity:0}}
-  @keyframes mcGlow{0%,100%{box-shadow:0 0 0 0 rgba(138,180,255,0)}50%{box-shadow:0 0 10px 0 rgba(138,180,255,.35)}}
-  @media (prefers-reduced-motion: reduce){.mc-line{animation:none}.mc-line.l1{width:94%}.mc-line.l2{width:78%}.mc-line.l3{width:88%}.mc-line.l4{width:52%}.mc-caret,.mc-ia{animation:none}}
+  /* ===== animación ServerForge CLI (servidor configurándose y asegurándose) ===== */
+ .sf-art{background:radial-gradient(120% 120% at 50% -10%,#0f3a34 0%,#0c2620 55%,#081a16 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+ .sf-stage{position:relative;width:268px;max-width:84%}
+ .sf-win{background:#0a1119;border:1px solid rgba(255,255,255,.10);border-radius:12px;overflow:hidden;box-shadow:0 22px 48px -22px rgba(0,0,0,.65)}
+ .sf-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
+ .sf-dot{width:9px;height:9px;border-radius:50%}
+ .sf-cmd{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#4ade80;letter-spacing:.03em}
+ .sf-body{padding:13px 14px 15px;position:relative}
+ .sf-row{display:flex;align-items:center;gap:8px;height:21px;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#55607a}
+ .sf-tick{width:13px;height:13px;border-radius:4px;border:1.5px solid #2a3550;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#0a1119}
+ .sf-tick svg{opacity:0}
+ .sf-r1{animation:sfT1 6s linear infinite}
+ .sf-r2{animation:sfT2 6s linear infinite}
+ .sf-r3{animation:sfT3 6s linear infinite}
+ .sf-r4{animation:sfT4 6s linear infinite}
+ .sf-r5{animation:sfT5 6s linear infinite}
+ .sf-r1 .sf-tick{animation:sfK1 6s linear infinite}
+ .sf-r2 .sf-tick{animation:sfK2 6s linear infinite}
+ .sf-r3 .sf-tick{animation:sfK3 6s linear infinite}
+ .sf-r4 .sf-tick{animation:sfK4 6s linear infinite}
+ .sf-r5 .sf-tick{animation:sfK5 6s linear infinite}
+ .sf-r1 .sf-tick svg{animation:sfS1 6s linear infinite}
+ .sf-r2 .sf-tick svg{animation:sfS2 6s linear infinite}
+ .sf-r3 .sf-tick svg{animation:sfS3 6s linear infinite}
+ .sf-r4 .sf-tick svg{animation:sfS4 6s linear infinite}
+ .sf-r5 .sf-tick svg{animation:sfS5 6s linear infinite}
+ .sf-prog{margin-top:11px;height:4px;border-radius:3px;background:rgba(255,255,255,.07);overflow:hidden}
+ .sf-fill{height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,#22c55e,#4ade80);animation:sfFill 6s cubic-bezier(.4,0,.3,1) infinite}
+ .sf-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(.6);background:#15803d;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;padding:8px 16px;border-radius:999px;display:flex;align-items:center;gap:6px;white-space:nowrap;box-shadow:0 14px 30px -10px rgba(0,0,0,.6),0 0 0 4px rgba(34,197,94,.14);opacity:0;z-index:6;animation:sfBadge 6s cubic-bezier(.45,0,.55,1) infinite}
+ @keyframes sfT1{0%,9%{color:#55607a}13%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
+ @keyframes sfT2{0%,21%{color:#55607a}25%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
+ @keyframes sfT3{0%,33%{color:#55607a}37%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
+ @keyframes sfT4{0%,45%{color:#55607a}49%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
+ @keyframes sfT5{0%,57%{color:#55607a}61%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
+ @keyframes sfK1{0%,9%{background:transparent;border-color:#2a3550}13%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
+ @keyframes sfK2{0%,21%{background:transparent;border-color:#2a3550}25%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
+ @keyframes sfK3{0%,33%{background:transparent;border-color:#2a3550}37%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
+ @keyframes sfK4{0%,45%{background:transparent;border-color:#2a3550}49%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
+ @keyframes sfK5{0%,57%{background:transparent;border-color:#2a3550}61%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
+ @keyframes sfS1{0%,9%{opacity:0}13%,88%{opacity:1}94%,100%{opacity:0}}
+ @keyframes sfS2{0%,21%{opacity:0}25%,88%{opacity:1}94%,100%{opacity:0}}
+ @keyframes sfS3{0%,33%{opacity:0}37%,88%{opacity:1}94%,100%{opacity:0}}
+ @keyframes sfS4{0%,45%{opacity:0}49%,88%{opacity:1}94%,100%{opacity:0}}
+ @keyframes sfS5{0%,57%{opacity:0}61%,88%{opacity:1}94%,100%{opacity:0}}
+ @keyframes sfFill{0%,7%{width:0}13%{width:20%}25%{width:40%}37%{width:60%}49%{width:80%}61%,88%{width:100%}94%,100%{width:0}}
+ @keyframes sfBadge{0%,63%{opacity:0;transform:translate(-50%,-50%) scale(.6)}70%{opacity:1;transform:translate(-50%,-50%) scale(1.1)}75%{transform:translate(-50%,-50%) scale(1)}88%{opacity:1;transform:translate(-50%,-50%) scale(1)}94%,100%{opacity:0;transform:translate(-50%,-50%) scale(1)}}
+ @media (prefers-reduced-motion: reduce){
+ .sf-row,.sf-tick,.sf-tick svg,.sf-fill{animation:none}
+ .sf-row{color:#cfe8dc}.sf-tick{background:#22c55e;border-color:#22c55e}.sf-tick svg{opacity:1}.sf-fill{width:100%}
+ .sf-badge{opacity:1;animation:none;transform:translate(-50%,-50%) scale(1)}}
 
   /* ===== botones de tarjeta diferenciados ===== */
   .btn-open{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:500;padding:8px 14px;border-radius:10px;background:var(--accent);color:#fff !important;text-decoration:none;border:1px solid var(--accent);cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
@@ -122,6 +148,8 @@
     .tc-stage{width:190px}
     .mc-art{min-height:232px !important}
     .mc-stage{width:224px}
+    .sf-art{min-height:240px !important}
+    .sf-stage{width:230px}
     .others-grid{grid-template-columns:1fr !important}
     .stack-grid{grid-template-columns:1fr 1fr !important}
     .certs-grid{grid-template-columns:1fr !important}
@@ -330,31 +358,35 @@ const PROJECTS = [
     ]
   },
   {
-   id: 'devopskit',
-   name: 'DevOps KIT CLI',
-   mono: 'DK',
-   year: '2026',
-   tagline: 'Herramienta CLI en Python que agrupa utilidades para automatizar tareas de DevOps.',
-   desc: 'DevOps KIT CLI es una herramienta de línea de comandos en Python que reúne utilidades para automatizar tareas habituales de DevOps: gestión de contenedores, despliegues y operaciones repetitivas. Pensada para acelerar el día a día con comandos simples y reutilizables.',
-   status: 'En desarrollo',
-   statusColor: '#fbbf24',
-   metric: 'v1',
-   metricLabel: 'primera versión',
-   tags: ['Python', 'CLI', 'Typer', 'Docker'],
-   role: 'creador',
-   demo: '',
-   github: 'https://github.com/Manueh9/ServerSetup_CLI',   // repo publico
-   features: [
-     'Utilidades de automatización agrupadas en una sola CLI',
-     'Comandos para gestión de contenedores Docker',
-     'Automatización de tareas de despliegue y operación',
-     'Empaquetado e instalable con pip'
-   ],
-   stack: [
-     { label: 'Lenguaje', items: ['Python'] },
-     { label: 'CLI & tooling', items: ['Typer', 'pytest'] },
-     { label: 'Integraciones', items: ['Docker'] }
-   ]
+    id: 'sforge',
+    art: 'sforge',
+    name: 'ServerForge CLI',
+    mono: 'SF',
+    year: '2026',
+    tagline: 'CLI en Python que automatiza la configuración y el hardening inicial de servidores Ubuntu. De horas a minutos, en un solo comando.',
+    desc: 'ServerForge CLI es una herramienta de línea de comandos que empaqueta todo el proceso de puesta a punto de un servidor Linux recién provisionado: actualización del sistema, instalación y aseguramiento de SSH, firewall, protección contra fuerza bruta, gestión de usuarios, zona horaria, swap y tareas programadas. Expone cada tarea como un flag independiente y ofrece un flujo guiado --all que ejecuta las diez fases en el orden correcto y de forma idempotente. Está publicada en PyPI e instalable con pip.',
+    status: 'Publicado en PyPI',
+    statusColor: '#34d399',
+    metric: 'v1.0',
+    metricLabel: 'serverforge-cli',
+    tags: ['Python', 'CLI', 'Rich', 'pytest', 'GitHub Actions'],
+    role: 'creador · diseño & desarrollo',
+    demo: 'https://pypi.org/project/serverforge-cli/',
+    github: 'https://github.com/Manueh9/ServerSetup_CLI',
+    features: [
+      '11 módulos: sistema, SSH, Git, firewall, fail2ban, usuarios, cron, swap…',
+      'Flujo --all con 10 fases idempotentes y pasos interactivos',
+      'Arquitectura en 3 capas: CLI, comandos y lógica de sistema',
+      'Detección del usuario real tras sudo (SUDO_USER)',
+      'Suite de 173 tests con mocks; CI en Python 3.11 y 3.12',
+      'Interfaz en terminal con tablas y barras de uso (Rich)'
+    ],
+    stack: [
+      { label: 'Lenguaje', items: ['Python 3.12', 'Bash'] },
+      { label: 'CLI & UI', items: ['argparse', 'Rich'] },
+      { label: 'Testing & CI', items: ['pytest', 'pytest-mock', 'GitHub Actions'] },
+      { label: 'Sistema', items: ['Ubuntu Server', 'systemd', 'UFW', 'fail2ban'] }
+    ]
   }
 ];
 
@@ -382,29 +414,28 @@ const CERT_ANIM = `
     <div class="tc-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Verificado</div>
   </div>`;
 
-/* ---- animación de MailCraft (email redactándose con IA) ---- */
-const MAIL_ANIM = `
-  <div class="mc-stage">
-    <div class="mc-win">
-      <div class="mc-bar">
-        <span class="mc-dot" style="background:#ff5f57"></span>
-        <span class="mc-dot" style="background:#febc2e"></span>
-        <span class="mc-dot" style="background:#28c840"></span>
-        <span class="mc-ia">✦ IA</span>
-      </div>
-      <div class="mc-fields">
-        <div class="mc-field"><span class="mc-lbl">Para</span>cliente@empresa.com</div>
-        <div class="mc-field"><span class="mc-lbl">Asunto</span>Propuesta de colaboración</div>
-      </div>
-      <div class="mc-body">
-        <span class="mc-line l1"></span>
-        <span class="mc-line l2"></span>
-        <span class="mc-line l3"></span>
-        <span class="mc-line l4"></span>
-        <span class="mc-caret"></span>
-      </div>
+/* ---- animación de ServerForge CLI (servidor configurándose y asegurándose) ---- */
+const SFORGE_ANIM = `
+<div class="sf-stage">
+  <div class="sf-win">
+    <div class="sf-bar">
+      <span class="sf-dot" style="background:#ff5f57"></span>
+      <span class="sf-dot" style="background:#febc2e"></span>
+      <span class="sf-dot" style="background:#28c840"></span>
+      <span class="sf-cmd">$ sforge --all</span>
     </div>
-  </div>`;
+    <div class="sf-body">
+      <div class="sf-row sf-r1"><span class="sf-tick"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>System update</div>
+      <div class="sf-row sf-r2"><span class="sf-tick"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>SSH hardening</div>
+      <div class="sf-row sf-r3"><span class="sf-tick"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>Firewall (UFW)</div>
+      <div class="sf-row sf-r4"><span class="sf-tick"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>fail2ban</div>
+      <div class="sf-row sf-r5"><span class="sf-tick"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></span>Users · Swap · Cron</div>
+      <div class="sf-prog"><div class="sf-fill"></div></div>
+    </div>
+  </div>
+  <div class="sf-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6l7.5 3v6.1c0 4.5-3.1 8.6-7.5 9.7-4.4-1.1-7.5-5.2-7.5-9.7V5.6z"/><path d="M9 12l2.2 2.2L15.4 10"/></svg>Servidor asegurado</div>
+</div>`;
+ 
 const TIMELINE = [
   {
     id: 'tl-job',
@@ -459,8 +490,8 @@ function schip(t){
 }
 
 /* ---- animaciones de proyecto (según p.art) ---- */
-function artFor(p){ return p.art === 'trycert' ? CERT_ANIM : p.art === 'mailcraft' ? MAIL_ANIM : ''; }
-function artClass(p){ return p.art === 'trycert' ? 'tc-art' : p.art === 'mailcraft' ? 'mc-art' : ''; }
+function artFor(p){ return p.art === 'trycert' ? CERT_ANIM : p.art === 'mailcraft' ? MAIL_ANIM : p.art === 'sforge' ? SFORGE_ANIM : ''; }
+function artClass(p){ return p.art === 'trycert' ? 'tc-art' : p.art === 'mailcraft' ? 'mc-art' : p.art === 'sforge' ? 'sf-art' : ''; }
 
 /* ---- proyecto destacado ---- */
 function renderFeatured(p){
