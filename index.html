@@ -543,7 +543,9 @@ function wideCard(p){
         <p style="font-size:15px;line-height:1.55;color:var(--muted);margin:0">${p.tagline}</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap">${p.tags.map(schip).join('')}</div>
         <div style="display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:16px">
-          <span class="btn-detail">ver detalle →</span>
+         ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="btn-open">ver proyecto ↗</a>` : ''}
+         ${p.github ? `<a href="${p.github}" target="_blank" rel="noopener" class="btn-detail" style="text-decoration:none">código ↗</a>` : ''}
+         <span class="btn-detail">ver detalle →</span>
         </div>
       </div>
       <div class="featured-art ${artClass(p)}" style="min-height:250px">${artFor(p)}</div>
