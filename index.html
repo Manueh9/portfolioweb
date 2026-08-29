@@ -28,11 +28,12 @@
   @keyframes modalIn{from{opacity:0;transform:translateY(26px) scale(.97)}to{opacity:1;transform:none}}
   @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 
-  /* ============ hover (sustituye a style-hover del original) ============ */
+  /* ============ hover ============ */
   .navlink{color:var(--muted);text-decoration:none;transition:color .2s}
   .navlink:hover{color:var(--text)}
-  .themebtn{transition:border-color .2s,transform .2s}
+  .themebtn,.langbtn{transition:border-color .2s,transform .2s,color .2s}
   .themebtn:hover{border-color:var(--accent);transform:rotate(15deg)}
+  .langbtn:hover{border-color:var(--accent);color:var(--accent)}
   .btnp{transition:transform .2s,box-shadow .2s}
   .btnp:hover{transform:translateY(-2px);box-shadow:0 10px 30px var(--glow)}
   .btns{transition:border-color .2s}
@@ -81,55 +82,55 @@
   @media (prefers-reduced-motion: reduce){.tc-scan,.tc-fill{display:none}.tc-badge{opacity:1;animation:none;transform:translate(-50%,-50%) scale(1) rotate(-7deg)}}
 
   /* ===== animación ServerForge CLI (servidor configurándose y asegurándose) ===== */
- .sf-art{background:radial-gradient(120% 120% at 50% -10%,#0f3a34 0%,#0c2620 55%,#081a16 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
- .sf-stage{position:relative;width:268px;max-width:84%}
- .sf-win{background:#0a1119;border:1px solid rgba(255,255,255,.10);border-radius:12px;overflow:hidden;box-shadow:0 22px 48px -22px rgba(0,0,0,.65)}
- .sf-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
- .sf-dot{width:9px;height:9px;border-radius:50%}
- .sf-cmd{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#4ade80;letter-spacing:.03em}
- .sf-body{padding:13px 14px 15px;position:relative}
- .sf-row{display:flex;align-items:center;gap:8px;height:21px;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#55607a}
- .sf-tick{width:13px;height:13px;border-radius:4px;border:1.5px solid #2a3550;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#0a1119}
- .sf-tick svg{opacity:0}
- .sf-r1{animation:sfT1 6s linear infinite}
- .sf-r2{animation:sfT2 6s linear infinite}
- .sf-r3{animation:sfT3 6s linear infinite}
- .sf-r4{animation:sfT4 6s linear infinite}
- .sf-r5{animation:sfT5 6s linear infinite}
- .sf-r1 .sf-tick{animation:sfK1 6s linear infinite}
- .sf-r2 .sf-tick{animation:sfK2 6s linear infinite}
- .sf-r3 .sf-tick{animation:sfK3 6s linear infinite}
- .sf-r4 .sf-tick{animation:sfK4 6s linear infinite}
- .sf-r5 .sf-tick{animation:sfK5 6s linear infinite}
- .sf-r1 .sf-tick svg{animation:sfS1 6s linear infinite}
- .sf-r2 .sf-tick svg{animation:sfS2 6s linear infinite}
- .sf-r3 .sf-tick svg{animation:sfS3 6s linear infinite}
- .sf-r4 .sf-tick svg{animation:sfS4 6s linear infinite}
- .sf-r5 .sf-tick svg{animation:sfS5 6s linear infinite}
- .sf-prog{margin-top:11px;height:4px;border-radius:3px;background:rgba(255,255,255,.07);overflow:hidden}
- .sf-fill{height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,#22c55e,#4ade80);animation:sfFill 6s cubic-bezier(.4,0,.3,1) infinite}
- .sf-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(.6);background:#15803d;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;padding:8px 16px;border-radius:999px;display:flex;align-items:center;gap:6px;white-space:nowrap;box-shadow:0 14px 30px -10px rgba(0,0,0,.6),0 0 0 4px rgba(34,197,94,.14);opacity:0;z-index:6;animation:sfBadge 6s cubic-bezier(.45,0,.55,1) infinite}
- @keyframes sfT1{0%,9%{color:#55607a}13%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
- @keyframes sfT2{0%,21%{color:#55607a}25%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
- @keyframes sfT3{0%,33%{color:#55607a}37%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
- @keyframes sfT4{0%,45%{color:#55607a}49%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
- @keyframes sfT5{0%,57%{color:#55607a}61%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
- @keyframes sfK1{0%,9%{background:transparent;border-color:#2a3550}13%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
- @keyframes sfK2{0%,21%{background:transparent;border-color:#2a3550}25%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
- @keyframes sfK3{0%,33%{background:transparent;border-color:#2a3550}37%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
- @keyframes sfK4{0%,45%{background:transparent;border-color:#2a3550}49%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
- @keyframes sfK5{0%,57%{background:transparent;border-color:#2a3550}61%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
- @keyframes sfS1{0%,9%{opacity:0}13%,88%{opacity:1}94%,100%{opacity:0}}
- @keyframes sfS2{0%,21%{opacity:0}25%,88%{opacity:1}94%,100%{opacity:0}}
- @keyframes sfS3{0%,33%{opacity:0}37%,88%{opacity:1}94%,100%{opacity:0}}
- @keyframes sfS4{0%,45%{opacity:0}49%,88%{opacity:1}94%,100%{opacity:0}}
- @keyframes sfS5{0%,57%{opacity:0}61%,88%{opacity:1}94%,100%{opacity:0}}
- @keyframes sfFill{0%,7%{width:0}13%{width:20%}25%{width:40%}37%{width:60%}49%{width:80%}61%,88%{width:100%}94%,100%{width:0}}
- @keyframes sfBadge{0%,63%{opacity:0;transform:translate(-50%,-50%) scale(.6)}70%{opacity:1;transform:translate(-50%,-50%) scale(1.1)}75%{transform:translate(-50%,-50%) scale(1)}88%{opacity:1;transform:translate(-50%,-50%) scale(1)}94%,100%{opacity:0;transform:translate(-50%,-50%) scale(1)}}
- @media (prefers-reduced-motion: reduce){
- .sf-row,.sf-tick,.sf-tick svg,.sf-fill{animation:none}
- .sf-row{color:#cfe8dc}.sf-tick{background:#22c55e;border-color:#22c55e}.sf-tick svg{opacity:1}.sf-fill{width:100%}
- .sf-badge{opacity:1;animation:none;transform:translate(-50%,-50%) scale(1)}}
+  .sf-art{background:radial-gradient(120% 120% at 50% -10%,#0f3a34 0%,#0c2620 55%,#081a16 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .sf-stage{position:relative;width:268px;max-width:84%}
+  .sf-win{background:#0a1119;border:1px solid rgba(255,255,255,.10);border-radius:12px;overflow:hidden;box-shadow:0 22px 48px -22px rgba(0,0,0,.65)}
+  .sf-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
+  .sf-dot{width:9px;height:9px;border-radius:50%}
+  .sf-cmd{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#4ade80;letter-spacing:.03em}
+  .sf-body{padding:13px 14px 15px;position:relative}
+  .sf-row{display:flex;align-items:center;gap:8px;height:21px;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#55607a}
+  .sf-tick{width:13px;height:13px;border-radius:4px;border:1.5px solid #2a3550;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#0a1119}
+  .sf-tick svg{opacity:0}
+  .sf-r1{animation:sfT1 6s linear infinite}
+  .sf-r2{animation:sfT2 6s linear infinite}
+  .sf-r3{animation:sfT3 6s linear infinite}
+  .sf-r4{animation:sfT4 6s linear infinite}
+  .sf-r5{animation:sfT5 6s linear infinite}
+  .sf-r1 .sf-tick{animation:sfK1 6s linear infinite}
+  .sf-r2 .sf-tick{animation:sfK2 6s linear infinite}
+  .sf-r3 .sf-tick{animation:sfK3 6s linear infinite}
+  .sf-r4 .sf-tick{animation:sfK4 6s linear infinite}
+  .sf-r5 .sf-tick{animation:sfK5 6s linear infinite}
+  .sf-r1 .sf-tick svg{animation:sfS1 6s linear infinite}
+  .sf-r2 .sf-tick svg{animation:sfS2 6s linear infinite}
+  .sf-r3 .sf-tick svg{animation:sfS3 6s linear infinite}
+  .sf-r4 .sf-tick svg{animation:sfS4 6s linear infinite}
+  .sf-r5 .sf-tick svg{animation:sfS5 6s linear infinite}
+  .sf-prog{margin-top:11px;height:4px;border-radius:3px;background:rgba(255,255,255,.07);overflow:hidden}
+  .sf-fill{height:100%;width:0;border-radius:3px;background:linear-gradient(90deg,#22c55e,#4ade80);animation:sfFill 6s cubic-bezier(.4,0,.3,1) infinite}
+  .sf-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(.6);background:#15803d;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;padding:8px 16px;border-radius:999px;display:flex;align-items:center;gap:6px;white-space:nowrap;box-shadow:0 14px 30px -10px rgba(0,0,0,.6),0 0 0 4px rgba(34,197,94,.14);opacity:0;z-index:6;animation:sfBadge 6s cubic-bezier(.45,0,.55,1) infinite}
+  @keyframes sfT1{0%,9%{color:#55607a}13%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
+  @keyframes sfT2{0%,21%{color:#55607a}25%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
+  @keyframes sfT3{0%,33%{color:#55607a}37%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
+  @keyframes sfT4{0%,45%{color:#55607a}49%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
+  @keyframes sfT5{0%,57%{color:#55607a}61%,88%{color:#cfe8dc}94%,100%{color:#55607a}}
+  @keyframes sfK1{0%,9%{background:transparent;border-color:#2a3550}13%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
+  @keyframes sfK2{0%,21%{background:transparent;border-color:#2a3550}25%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
+  @keyframes sfK3{0%,33%{background:transparent;border-color:#2a3550}37%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
+  @keyframes sfK4{0%,45%{background:transparent;border-color:#2a3550}49%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
+  @keyframes sfK5{0%,57%{background:transparent;border-color:#2a3550}61%,88%{background:#22c55e;border-color:#22c55e}94%,100%{background:transparent;border-color:#2a3550}}
+  @keyframes sfS1{0%,9%{opacity:0}13%,88%{opacity:1}94%,100%{opacity:0}}
+  @keyframes sfS2{0%,21%{opacity:0}25%,88%{opacity:1}94%,100%{opacity:0}}
+  @keyframes sfS3{0%,33%{opacity:0}37%,88%{opacity:1}94%,100%{opacity:0}}
+  @keyframes sfS4{0%,45%{opacity:0}49%,88%{opacity:1}94%,100%{opacity:0}}
+  @keyframes sfS5{0%,57%{opacity:0}61%,88%{opacity:1}94%,100%{opacity:0}}
+  @keyframes sfFill{0%,7%{width:0}13%{width:20%}25%{width:40%}37%{width:60%}49%{width:80%}61%,88%{width:100%}94%,100%{width:0}}
+  @keyframes sfBadge{0%,63%{opacity:0;transform:translate(-50%,-50%) scale(.6)}70%{opacity:1;transform:translate(-50%,-50%) scale(1.1)}75%{transform:translate(-50%,-50%) scale(1)}88%{opacity:1;transform:translate(-50%,-50%) scale(1)}94%,100%{opacity:0;transform:translate(-50%,-50%) scale(1)}}
+  @media (prefers-reduced-motion: reduce){
+  .sf-row,.sf-tick,.sf-tick svg,.sf-fill{animation:none}
+  .sf-row{color:#cfe8dc}.sf-tick{background:#22c55e;border-color:#22c55e}.sf-tick svg{opacity:1}.sf-fill{width:100%}
+  .sf-badge{opacity:1;animation:none;transform:translate(-50%,-50%) scale(1)}}
 
   /* ===== botones de tarjeta diferenciados ===== */
   .btn-open{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:500;padding:8px 14px;border-radius:10px;background:var(--accent);color:#fff !important;text-decoration:none;border:1px solid var(--accent);cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
@@ -146,8 +147,6 @@
     .featured-art{min-height:170px !important}
     .tc-art{min-height:248px !important}
     .tc-stage{width:190px}
-    .mc-art{min-height:232px !important}
-    .mc-stage{width:224px}
     .sf-art{min-height:240px !important}
     .sf-stage{width:230px}
     .others-grid{grid-template-columns:1fr !important}
@@ -162,7 +161,6 @@
 <body>
 <div class="pf-root" id="pf-root" data-theme="dark" style="background:var(--bg);color:var(--text);min-height:100vh;position:relative;overflow-x:hidden;transition:background .4s ease,color .4s ease">
 
-  <!-- blobs de fondo -->
   <div style="position:fixed;top:-120px;left:-100px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 70%);filter:blur(40px);pointer-events:none;z-index:0;animation:floaty 14s ease-in-out infinite"></div>
   <div style="position:fixed;bottom:-160px;right:-120px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 70%);filter:blur(50px);pointer-events:none;z-index:0;opacity:.7;animation:floaty2 18s ease-in-out infinite"></div>
 
@@ -171,10 +169,11 @@
     <div style="max-width:1180px;margin:0 auto;padding:15px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px">
       <a href="#top" style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:15px;color:var(--text);text-decoration:none;letter-spacing:-.02em">manuelgr<span style="color:var(--accent)">.</span>dev</a>
       <div class="nav-links" style="display:flex;align-items:center;gap:26px;font-family:'JetBrains Mono',monospace;font-size:13px">
-        <a href="#proyectos" class="navlink hide-sm">Proyectos</a>
-        <a href="#stack" class="navlink hide-sm">Stack</a>
-        <a href="#trayectoria" class="navlink hide-sm">Trayectoria</a>
-        <a href="#contacto" class="navlink">Contacto</a>
+        <a href="#proyectos" class="navlink hide-sm" data-en="Projects">Proyectos</a>
+        <a href="#stack" class="navlink hide-sm" data-en="Stack">Stack</a>
+        <a href="#trayectoria" class="navlink hide-sm" data-en="Career">Trayectoria</a>
+        <a href="#contacto" class="navlink" data-en="Contact">Contacto</a>
+        <button id="langbtn" class="langbtn" aria-label="Language / Idioma" style="min-width:38px;height:38px;padding:0 10px;display:flex;align-items:center;justify-content:center;border-radius:11px;border:1px solid var(--border);background:var(--surface2);color:var(--text);cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700">EN</button>
         <button id="themebtn" class="themebtn" aria-label="Cambiar tema" style="width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:11px;border:1px solid var(--border);background:var(--surface2);color:var(--text);cursor:pointer"></button>
       </div>
     </div>
@@ -187,24 +186,22 @@
       <div id="pf-heroglow" style="position:absolute;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 70%);transform:translate(-50%,-50%);pointer-events:none;opacity:0;transition:opacity .4s;filter:blur(24px);z-index:0"></div>
       <div class="hero-grid" style="position:relative;z-index:1;display:grid;grid-template-columns:repeat(6,1fr);gap:18px;grid-auto-rows:minmax(132px,auto)">
 
-        <!-- intro -->
         <div class="hero-intro" data-reveal="0" style="grid-column:span 4;grid-row:span 2;background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:40px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden">
           <div>
             <div style="display:flex;align-items:center;gap:16px;margin-bottom:26px">
               <div style="width:58px;height:58px;border-radius:16px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:20px;color:#fff;flex-shrink:0">MG</div>
-              <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted)"><span style="color:var(--code)">●</span> Barcelona, ES · remoto</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted)"><span style="color:var(--code)">●</span> Barcelona, ES · <span data-en="remote">remoto</span></div>
             </div>
-            <h1 style="font-size:clamp(38px,5.4vw,64px);font-weight:700;letter-spacing:-.03em;line-height:1.02;margin:0">Hola, soy <span style="background:linear-gradient(110deg,var(--accent),var(--accent2),var(--accent));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:gradMove 4s linear infinite">Manuel García</span></h1>
-            <p style="font-family:'JetBrains Mono',monospace;font-size:15px;color:var(--accent);margin:16px 0 0;letter-spacing:-.01em">&gt; Desarrollador .NET · del código a producción</p>
-            <p style="font-size:17px;line-height:1.6;color:var(--muted);max-width:480px;margin:14px 0 0">Desarrollador .NET centrado en Back-End y en llevar el código a producción. Construyo, despliego y opero aplicaciones —C#, .NET, SQL Server, Docker y CI/CD— y me especializo en Cloud/DevOps.</p>
+            <h1 style="font-size:clamp(38px,5.4vw,64px);font-weight:700;letter-spacing:-.03em;line-height:1.02;margin:0"><span data-en="Hi, I'm">Hola, soy</span> <span style="background:linear-gradient(110deg,var(--accent),var(--accent2),var(--accent));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:gradMove 4s linear infinite">Manuel García</span></h1>
+            <p style="font-family:'JetBrains Mono',monospace;font-size:15px;color:var(--accent);margin:16px 0 0;letter-spacing:-.01em" data-en="> .NET Developer · from code to production">&gt; Desarrollador .NET · del código a producción</p>
+            <p style="font-size:17px;line-height:1.6;color:var(--muted);max-width:480px;margin:14px 0 0" data-en="A .NET developer focused on the back-end and on shipping code to production. I build, deploy and operate applications —C#, .NET, SQL Server, Docker and CI/CD— and I'm specializing in Cloud/DevOps.">Desarrollador .NET centrado en Back-End y en llevar el código a producción. Construyo, despliego y opero aplicaciones —C#, .NET, SQL Server, Docker y CI/CD— y me especializo en Cloud/DevOps.</p>
           </div>
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px">
-            <a href="#proyectos" class="btnp" style="font-family:'JetBrains Mono',monospace;font-size:14px;padding:13px 22px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:500">ver proyectos →</a>
-            <a href="#contacto" class="btns" style="font-family:'JetBrains Mono',monospace;font-size:14px;padding:13px 22px;border-radius:12px;background:var(--surface2);color:var(--text);text-decoration:none;font-weight:500;border:1px solid var(--border)">contacto</a>
+            <a href="#proyectos" class="btnp" style="font-family:'JetBrains Mono',monospace;font-size:14px;padding:13px 22px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:500" data-en="view projects →">ver proyectos →</a>
+            <a href="#contacto" class="btns" style="font-family:'JetBrains Mono',monospace;font-size:14px;padding:13px 22px;border-radius:12px;background:var(--surface2);color:var(--text);text-decoration:none;font-weight:500;border:1px solid var(--border)" data-en="contact">contacto</a>
           </div>
         </div>
 
-        <!-- terminal -->
         <div class="hero-term" data-reveal="80" style="grid-column:span 2;grid-row:span 2;background:#0b0b12;border:1px solid var(--border);border-radius:22px;overflow:hidden;display:flex;flex-direction:column">
           <div style="display:flex;align-items:center;gap:7px;padding:13px 16px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)">
             <span style="width:11px;height:11px;border-radius:50%;background:#ff5f57"></span>
@@ -215,22 +212,19 @@
           <div id="pf-term" style="font-family:'JetBrains Mono',monospace;font-size:12.5px;line-height:1.85;padding:18px 16px;color:#ececf4;flex:1;min-height:0"></div>
         </div>
 
-        <!-- métrica 1 -->
         <div class="hero-cell" data-reveal="140" style="grid-column:span 2;background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:center">
           <div style="font-family:'JetBrains Mono',monospace;font-size:44px;font-weight:700;color:var(--text);line-height:1"><span data-count="2" data-suffix="+">2+</span></div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted);margin-top:8px">años de experiencia</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted);margin-top:8px" data-en="years of experience">años de experiencia</div>
         </div>
 
-        <!-- métrica 2 -->
         <div class="hero-cell" data-reveal="200" style="grid-column:span 2;background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:center">
           <div style="font-family:'JetBrains Mono',monospace;font-size:30px;font-weight:700;color:var(--text);line-height:1.1;letter-spacing:-.02em">Full-Stack</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted);margin-top:8px">del código a producción</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted);margin-top:8px" data-en="from code to production">del código a producción</div>
         </div>
 
-        <!-- disponibilidad -->
         <div class="hero-cell" data-reveal="260" style="grid-column:span 2;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:center;color:#fff">
-          <div style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;border-radius:50%;background:#9bffce;animation:pulseDot 2s infinite"></span><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500">disponible</span></div>
-          <div style="font-size:17px;font-weight:600;margin-top:10px;line-height:1.3">Abierto a nuevas oportunidades — freelance o jornada completa</div>
+          <div style="display:flex;align-items:center;gap:10px"><span style="width:10px;height:10px;border-radius:50%;background:#9bffce;animation:pulseDot 2s infinite"></span><span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500" data-en="available">disponible</span></div>
+          <div style="font-size:17px;font-weight:600;margin-top:10px;line-height:1.3" data-en="Open to new opportunities — freelance or full-time">Abierto a nuevas oportunidades — freelance o jornada completa</div>
         </div>
 
       </div>
@@ -238,8 +232,8 @@
 
     <!-- ===================== PROYECTOS ===================== -->
     <section id="proyectos" style="padding:130px 0 0">
-      <div data-reveal="0" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px"><span>01</span><span style="width:42px;height:1px;background:var(--accent);opacity:.5"></span>Proyectos</div>
-      <h2 data-reveal="60" style="font-size:clamp(32px,4.4vw,54px);font-weight:600;letter-spacing:-.025em;margin:18px 0 6px">Proyectos desarrollados</h2>
+      <div data-reveal="0" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px"><span>01</span><span style="width:42px;height:1px;background:var(--accent);opacity:.5"></span><span data-en="Projects">Proyectos</span></div>
+      <h2 data-reveal="60" style="font-size:clamp(32px,4.4vw,54px);font-weight:600;letter-spacing:-.025em;margin:18px 0 6px" data-en="Projects built">Proyectos desarrollados</h2>
       <p data-reveal="100" style="font-size:17px;color:var(--muted);max-width:560px;margin:0 0 40px"></p>
 
       <div id="featured"></div>
@@ -248,23 +242,23 @@
 
     <!-- ===================== STACK ===================== -->
     <section id="stack" style="padding:130px 0 0">
-      <div data-reveal="0" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px"><span>02</span><span style="width:42px;height:1px;background:var(--accent);opacity:.5"></span>Stack</div>
-      <h2 data-reveal="60" style="font-size:clamp(32px,4.4vw,54px);font-weight:600;letter-spacing:-.025em;margin:18px 0 40px">Tecnologías con las que trabajo</h2>
+      <div data-reveal="0" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px"><span>02</span><span style="width:42px;height:1px;background:var(--accent);opacity:.5"></span><span data-en="Stack">Stack</span></div>
+      <h2 data-reveal="60" style="font-size:clamp(32px,4.4vw,54px);font-weight:600;letter-spacing:-.025em;margin:18px 0 40px" data-en="Technologies I work with">Tecnologías con las que trabajo</h2>
       <div class="stack-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px">
         <div class="stackcard" data-reveal="0" style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:26px">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:18px">// lenguajes</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:18px" data-en="// languages">// lenguajes</div>
           <div style="display:flex;flex-direction:column;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--text)"><span>C#</span><span>JavaScript</span><span>SQL</span><span>Java</span><span>Python</span></div>
         </div>
         <div class="stackcard" data-reveal="70" style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:26px">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:18px">// back-end</div>
-          <div style="display:flex;flex-direction:column;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--text)"><span>.NET 10</span><span>ASP.NET</span><span>EF Core</span><span>Patrón MVC</span><span>SOLID</span></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:18px" data-en="// back-end">// back-end</div>
+          <div style="display:flex;flex-direction:column;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--text)"><span>.NET 10</span><span>ASP.NET</span><span>EF Core</span><span data-en="MVC pattern">Patrón MVC</span><span>SOLID</span></div>
         </div>
         <div class="stackcard" data-reveal="140" style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:26px">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:18px">// datos</div>
-          <div style="display:flex;flex-direction:column;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--text)"><span>SQL Server</span><span>SQLite</span><span>T-SQL</span><span>Optimización</span></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:18px" data-en="// data">// datos</div>
+          <div style="display:flex;flex-direction:column;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--text)"><span>SQL Server</span><span>SQLite</span><span>T-SQL</span><span data-en="Optimization">Optimización</span></div>
         </div>
         <div class="stackcard" data-reveal="210" style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:26px">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:18px">// infra & deploy</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:18px">// infra &amp; deploy</div>
           <div style="display:flex;flex-direction:column;gap:9px;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--text)"><span>Docker</span><span>CI/CD</span><span>GitHub Actions</span><span>Azure</span><span>Linux</span><span>Caddy</span><span>Cloudflare</span><span>Git</span></div>
         </div>
       </div>
@@ -272,18 +266,16 @@
 
     <!-- ===================== TRAYECTORIA ===================== -->
     <section id="trayectoria" style="padding:130px 0 0">
-      <div data-reveal="0" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px"><span>03</span><span style="width:42px;height:1px;background:var(--accent);opacity:.5"></span>Trayectoria</div>
-      <h2 data-reveal="60" style="font-size:clamp(32px,4.4vw,54px);font-weight:600;letter-spacing:-.025em;margin:18px 0 44px">Mi recorrido</h2>
+      <div data-reveal="0" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px"><span>03</span><span style="width:42px;height:1px;background:var(--accent);opacity:.5"></span><span data-en="Career">Trayectoria</span></div>
+      <h2 data-reveal="60" style="font-size:clamp(32px,4.4vw,54px);font-weight:600;letter-spacing:-.025em;margin:18px 0 44px" data-en="My journey">Mi recorrido</h2>
       <div style="position:relative;padding-left:34px">
         <div style="position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),transparent)"></div>
-
         <div id="timeline"></div>
-
       </div>
 
       <div data-reveal="0" style="margin-top:72px">
-        <h3 style="font-size:clamp(26px,3vw,34px);font-weight:600;letter-spacing:-.02em;margin:0 0 6px">Certificaciones</h3>
-        <p style="font-size:15px;color:var(--muted);margin:0 0 26px">Cursos completados y acreditados.</p>
+        <h3 style="font-size:clamp(26px,3vw,34px);font-weight:600;letter-spacing:-.02em;margin:0 0 6px" data-en="Certifications">Certificaciones</h3>
+        <p style="font-size:15px;color:var(--muted);margin:0 0 26px" data-en="Completed and accredited courses.">Cursos completados y acreditados.</p>
         <div id="certs" class="certs-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px"></div>
       </div>
     </section>
@@ -291,9 +283,9 @@
     <!-- ===================== CONTACTO ===================== -->
     <section id="contacto" style="padding:130px 0 110px">
       <div data-reveal="0" style="background:var(--surface);border:1px solid var(--border);border-radius:26px;padding:clamp(34px,5vw,64px);text-align:center;position:relative;overflow:hidden">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:18px">04 · Contacto</div>
-        <h2 style="font-size:clamp(34px,5vw,60px);font-weight:600;letter-spacing:-.03em;margin:0 0 14px">¿Construimos algo juntos?</h2>
-        <p style="font-size:18px;color:var(--muted);max-width:540px;margin:0 auto 32px;line-height:1.6">Estoy abierto a nuevas oportunidades, freelance o jornada completa. Si tienes una idea o un puesto que encaje, escríbeme.</p>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:18px" data-en="04 · Contact">04 · Contacto</div>
+        <h2 style="font-size:clamp(34px,5vw,60px);font-weight:600;letter-spacing:-.03em;margin:0 0 14px" data-en="Let's build something together?">¿Construimos algo juntos?</h2>
+        <p style="font-size:18px;color:var(--muted);max-width:540px;margin:0 auto 32px;line-height:1.6" data-en="I'm open to new opportunities, freelance or full-time. If you have an idea or a role that fits, drop me a line.">Estoy abierto a nuevas oportunidades, freelance o jornada completa. Si tienes una idea o un puesto que encaje, escríbeme.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;align-items:center">
           <button id="emailbtn" class="btnp" style="font-family:'JetBrains Mono',monospace;font-size:15px;padding:15px 26px;border-radius:13px;background:var(--accent);color:#fff;border:none;cursor:pointer;font-weight:500">manuel.garcia.rodriguez.010@gmail.com</button>
         </div>
@@ -306,12 +298,10 @@
 
   </main>
 
-  <!-- ===================== MODAL ===================== -->
   <div id="modal" style="display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto">
     <div id="modal-card" style="width:100%;max-width:740px;background:var(--surface);border:1px solid var(--border);border-radius:24px;overflow:hidden;margin:auto"></div>
   </div>
 
-  <!-- modal de detalle (trayectoria) -->
   <div id="dmodal" style="display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto">
     <div id="dmodal-card" style="position:relative;width:100%;max-width:620px;background:var(--surface);border:1px solid var(--border);border-radius:24px;overflow:hidden;margin:auto"></div>
   </div>
@@ -320,72 +310,58 @@
 
 <script>
 /* ============================================================
-   TUS PROYECTOS — edita / añade objetos aquí.
-   El primero es el DESTACADO (sale grande). El resto van en la rejilla.
-   Campos: id, name, mono, year, tagline, desc, status, statusColor,
-           metric, metricLabel, tags[], role, demo, github, features[],
-           stack[{label, items[]}]
+   PROYECTOS / CONTENIDO BILINGÜE
+   Los campos traducibles usan {es:'...', en:'...'}.
+   Los nombres técnicos, tags e items del stack son iguales en ambos idiomas.
    ============================================================ */
 const PROJECTS = [
   {
-    id: 'trycert',
-    art: 'trycert',
-    name: 'trycert',
-    mono: 'TC',
-    year: '2026',
-    tagline: 'Certificados verificables como servicio: PDF con código QR y página de verificación pública. API-first.',
-    desc: 'trycert es un servicio web que permite a academias, bootcamps y creadores de cursos emitir certificados en PDF que cualquiera puede verificar. Cada certificado lleva un identificador único, un código QR y una página de verificación pública. Es «API-first»: además del panel web, expone una API para emitir certificados automáticamente cuando un alumno termina un curso.',
-    status: 'En producción',
-    statusColor: '#34d399',                  // verde #34d399 · ámbar #fbbf24 · azul #4f8cff
-    metric: 'Live',
-    metricLabel: 'trycert.com',
-    tags: ['.NET 10', 'C#', 'EF Core', 'Docker', 'Caddy'],
-    role: 'creador · full-stack & infra',
-    demo: 'https://trycert.com',
-    github: '',                              // repo privado
-    features: [
-      'Certificados en PDF con identificador único y código QR',
-      'Página de verificación pública: válido / caducado / no encontrado',
-      'API REST para emitir certificados desde otras plataformas',
-      'Panel con marca propia: logo, firma, emisor y caducidad',
-      'Recuperación de contraseña, páginas legales y borrado RGPD',
-      'Desplegado en producción con HTTPS de extremo a extremo'
+    id:'trycert', art:'trycert', name:'trycert', mono:'TC', year:'2026',
+    tagline:{es:'Certificados verificables como servicio: PDF con código QR y página de verificación pública. API-first.', en:'Verifiable certificates as a service: PDF with a QR code and a public verification page. API-first.'},
+    desc:{es:'trycert es un servicio web que permite a academias, bootcamps y creadores de cursos emitir certificados en PDF que cualquiera puede verificar. Cada certificado lleva un identificador único, un código QR y una página de verificación pública. Es «API-first»: además del panel web, expone una API para emitir certificados automáticamente cuando un alumno termina un curso.', en:'trycert is a web service that lets academies, bootcamps and course creators issue PDF certificates that anyone can verify. Each certificate carries a unique ID, a QR code and a public verification page. It is "API-first": beyond the web panel, it exposes an API to issue certificates automatically when a student finishes a course.'},
+    status:{es:'En producción', en:'In production'},
+    statusColor:'#34d399',
+    metric:'Live', metricLabel:'trycert.com',
+    tags:['.NET 10','C#','EF Core','Docker','Caddy'],
+    role:{es:'creador · full-stack & infra', en:'creator · full-stack & infra'},
+    demo:'https://trycert.com', github:'',
+    features:[
+      {es:'Certificados en PDF con identificador único y código QR', en:'PDF certificates with a unique ID and QR code'},
+      {es:'Página de verificación pública: válido / caducado / no encontrado', en:'Public verification page: valid / expired / not found'},
+      {es:'API REST para emitir certificados desde otras plataformas', en:'REST API to issue certificates from other platforms'},
+      {es:'Panel con marca propia: logo, firma, emisor y caducidad', en:'Branded panel: logo, signature, issuer and expiry'},
+      {es:'Recuperación de contraseña, páginas legales y borrado RGPD', en:'Password recovery, legal pages and GDPR deletion'},
+      {es:'Desplegado en producción con HTTPS de extremo a extremo', en:'Deployed in production with end-to-end HTTPS'}
     ],
-    stack: [
-      { label: 'Back-end', items: ['.NET 10 / C#', 'ASP.NET Minimal API', 'EF Core', 'Playwright', 'QRCoder'] },
-      { label: 'Datos & tests', items: ['SQLite', 'xUnit (~20 tests)'] },
-      { label: 'Infra & deploy', items: ['Docker', 'Caddy 2', 'Cloudflare', 'Hetzner', 'Resend'] }
+    stack:[
+      {label:{es:'Back-end',en:'Back-end'}, items:['.NET 10 / C#','ASP.NET Minimal API','EF Core','Playwright','QRCoder']},
+      {label:{es:'Datos & tests',en:'Data & tests'}, items:['SQLite','xUnit (~20 tests)']},
+      {label:{es:'Infra & deploy',en:'Infra & deploy'}, items:['Docker','Caddy 2','Cloudflare','Hetzner','Resend']}
     ]
   },
   {
-    id: 'sforge',
-    art: 'sforge',
-    name: 'ServerForge CLI',
-    mono: 'SF',
-    year: '2026',
-    tagline: 'CLI en Python que automatiza la configuración y el hardening inicial de servidores Ubuntu. De horas a minutos, en un solo comando.',
-    desc: 'ServerForge CLI es una herramienta de línea de comandos que empaqueta todo el proceso de puesta a punto de un servidor Linux recién provisionado: actualización del sistema, instalación y aseguramiento de SSH, firewall, protección contra fuerza bruta, gestión de usuarios, zona horaria, swap y tareas programadas. Expone cada tarea como un flag independiente y ofrece un flujo guiado --all que ejecuta las diez fases en el orden correcto y de forma idempotente. Está publicada en PyPI e instalable con pip.',
-    status: 'Publicado en PyPI',
-    statusColor: '#34d399',
-    metric: 'v1.0',
-    metricLabel: 'serverforge-cli',
-    tags: ['Python', 'CLI', 'Rich', 'pytest', 'GitHub Actions'],
-    role: 'creador · diseño & desarrollo',
-    demo: 'https://pypi.org/project/serverforge-cli/',
-    github: 'https://github.com/Manueh9/ServerSetup_CLI',
-    features: [
-      '11 módulos: sistema, SSH, Git, firewall, fail2ban, usuarios, cron, swap…',
-      'Flujo --all con 10 fases idempotentes y pasos interactivos',
-      'Arquitectura en 3 capas: CLI, comandos y lógica de sistema',
-      'Detección del usuario real tras sudo (SUDO_USER)',
-      'Suite de 173 tests con mocks; CI en Python 3.11 y 3.12',
-      'Interfaz en terminal con tablas y barras de uso (Rich)'
+    id:'sforge', art:'sforge', name:'ServerForge CLI', mono:'SF', year:'2026',
+    tagline:{es:'CLI en Python que automatiza la configuración y el hardening inicial de servidores Ubuntu. De horas a minutos, en un solo comando.', en:'Python CLI that automates the initial setup and hardening of Ubuntu servers. From hours to minutes, in a single command.'},
+    desc:{es:'ServerForge CLI es una herramienta de línea de comandos que empaqueta todo el proceso de puesta a punto de un servidor Linux recién provisionado: actualización del sistema, instalación y aseguramiento de SSH, firewall, protección contra fuerza bruta, gestión de usuarios, zona horaria, swap y tareas programadas. Expone cada tarea como un flag independiente y ofrece un flujo guiado --all que ejecuta las diez fases en el orden correcto y de forma idempotente. Está publicada en PyPI e instalable con pip.', en:'ServerForge CLI is a command-line tool that packages the whole process of setting up a freshly provisioned Linux server: system update, SSH installation and hardening, firewall, brute-force protection, user management, timezone, swap and scheduled tasks. It exposes each task as an independent flag and offers a guided --all flow that runs the ten phases in the right order and idempotently. It is published on PyPI and installable with pip.'},
+    status:{es:'Publicado en PyPI', en:'Published on PyPI'},
+    statusColor:'#34d399',
+    metric:'v1.0', metricLabel:'serverforge-cli',
+    tags:['Python','CLI','Rich','pytest','GitHub Actions'],
+    role:{es:'creador · diseño & desarrollo', en:'creator · design & development'},
+    demo:'https://pypi.org/project/serverforge-cli/', github:'https://github.com/Manueh9/ServerSetup_CLI',
+    features:[
+      {es:'11 módulos: sistema, SSH, Git, firewall, fail2ban, usuarios, cron, swap…', en:'11 modules: system, SSH, Git, firewall, fail2ban, users, cron, swap…'},
+      {es:'Flujo --all con 10 fases idempotentes y pasos interactivos', en:'--all flow with 10 idempotent phases and interactive steps'},
+      {es:'Arquitectura en 3 capas: CLI, comandos y lógica de sistema', en:'3-layer architecture: CLI, commands and system logic'},
+      {es:'Detección del usuario real tras sudo (SUDO_USER)', en:'Real-user detection behind sudo (SUDO_USER)'},
+      {es:'Suite de 173 tests con mocks; CI en Python 3.11 y 3.12', en:'Suite of 173 tests with mocks; CI on Python 3.11 and 3.12'},
+      {es:'Interfaz en terminal con tablas y barras de uso (Rich)', en:'Terminal UI with tables and usage bars (Rich)'}
     ],
-    stack: [
-      { label: 'Lenguaje', items: ['Python 3.12', 'Bash'] },
-      { label: 'CLI & UI', items: ['argparse', 'Rich'] },
-      { label: 'Testing & CI', items: ['pytest', 'pytest-mock', 'GitHub Actions'] },
-      { label: 'Sistema', items: ['Ubuntu Server', 'systemd', 'UFW', 'fail2ban'] }
+    stack:[
+      {label:{es:'Lenguaje',en:'Language'}, items:['Python 3.12','Bash']},
+      {label:{es:'CLI & UI',en:'CLI & UI'}, items:['argparse','Rich']},
+      {label:{es:'Testing & CI',en:'Testing & CI'}, items:['pytest','pytest-mock','GitHub Actions']},
+      {label:{es:'Sistema',en:'System'}, items:['Ubuntu Server','systemd','UFW','fail2ban']}
     ]
   }
 ];
@@ -414,8 +390,8 @@ const CERT_ANIM = `
     <div class="tc-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Verificado</div>
   </div>`;
 
-/* ---- animación de ServerForge CLI (servidor configurándose y asegurándose) ---- */
-const SFORGE_ANIM = `
+/* ---- animación de ServerForge CLI ---- */
+function sforgeAnim(){ return `
 <div class="sf-stage">
   <div class="sf-win">
     <div class="sf-bar">
@@ -433,50 +409,83 @@ const SFORGE_ANIM = `
       <div class="sf-prog"><div class="sf-fill"></div></div>
     </div>
   </div>
-  <div class="sf-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6l7.5 3v6.1c0 4.5-3.1 8.6-7.5 9.7-4.4-1.1-7.5-5.2-7.5-9.7V5.6z"/><path d="M9 12l2.2 2.2L15.4 10"/></svg>Servidor asegurado</div>
-</div>`;
- 
+  <div class="sf-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.6l7.5 3v6.1c0 4.5-3.1 8.6-7.5 9.7-4.4-1.1-7.5-5.2-7.5-9.7V5.6z"/><path d="M9 12l2.2 2.2L15.4 10"/></svg>${lang === 'en' ? 'Server secured' : 'Servidor asegurado'}</div>
+</div>`; }
+
 const TIMELINE = [
   {
-    id: 'tl-job',
-    period: '2023 — actualidad',
-    title: 'Programador Web Full-Stack',
-    subtitle: 'Sistemas de Publicaciones Informáticas · Sant Cugat del Vallès (híbrido)',
-    short: 'Back-End y bases de datos en una aplicación en producción: lógica de servidor en C#/.NET, cliente en JavaScript y datos en SQL Server.',
-    detail: {
-      desc: 'Desarrollador Web Full-Stack con una sólida especialización en Back-End y bases de datos, enfocado en optimizar el rendimiento, la seguridad y la escalabilidad de la aplicación. Trabajo en su desarrollo y mantenimiento: lógica de servidor eficiente en C#, funcionalidad de cliente y comunicación con el servidor en JavaScript, y gestión de datos en SQL Server (vistas, procedimientos y funciones).',
-      bullets: [
-        'Arquitectura Back-End: diseño e implementación de soluciones escalables y seguras',
-        'Optimización de bases de datos: vistas, procedimientos almacenados y funciones',
-        'Patrón MVC y principios SOLID para un código limpio y mantenible',
-        'Manejo de peticiones y tratamiento de los datos del servidor',
-        'Resolución de problemas complejos en Back-End y Front-End'
+    id:'tl-job',
+    period:{es:'2023 — actualidad', en:'2023 — present'},
+    title:{es:'Programador Web Full-Stack', en:'Full-Stack Web Developer'},
+    subtitle:{es:'Sistemas de Publicaciones Informáticas · Sant Cugat del Vallès (híbrido)', en:'Sistemas de Publicaciones Informáticas · Sant Cugat del Vallès (hybrid)'},
+    short:{es:'Back-End y bases de datos en una aplicación en producción: lógica de servidor en C#/.NET, cliente en JavaScript y datos en SQL Server.', en:'Back-end and databases on a production application: server-side logic in C#/.NET, client in JavaScript and data in SQL Server.'},
+    detail:{
+      desc:{es:'Desarrollador Web Full-Stack con una sólida especialización en Back-End y bases de datos, enfocado en optimizar el rendimiento, la seguridad y la escalabilidad de la aplicación. Trabajo en su desarrollo y mantenimiento: lógica de servidor eficiente en C#, funcionalidad de cliente y comunicación con el servidor en JavaScript, y gestión de datos en SQL Server (vistas, procedimientos y funciones).', en:"Full-Stack Web Developer with a strong specialization in back-end and databases, focused on optimizing the application's performance, security and scalability. I work on its development and maintenance: efficient server-side logic in C#, client-side functionality and server communication in JavaScript, and data management in SQL Server (views, procedures and functions)."},
+      bullets:[
+        {es:'Arquitectura Back-End: diseño e implementación de soluciones escalables y seguras', en:'Back-end architecture: design and implementation of scalable, secure solutions'},
+        {es:'Optimización de bases de datos: vistas, procedimientos almacenados y funciones', en:'Database optimization: views, stored procedures and functions'},
+        {es:'Patrón MVC y principios SOLID para un código limpio y mantenible', en:'MVC pattern and SOLID principles for clean, maintainable code'},
+        {es:'Manejo de peticiones y tratamiento de los datos del servidor', en:'Handling requests and processing server data'},
+        {es:'Resolución de problemas complejos en Back-End y Front-End', en:'Solving complex problems on back-end and front-end'}
       ],
-      tech: ['C#', '.NET', '.NET Core', '.NET Framework', 'ASP.NET Web API', 'LINQ', 'Entity Framework', 'EF Core', 'SQL Server', 'T-SQL', 'PL/SQL', 'JavaScript', 'JSON', 'RequireJS', 'MVC', 'Git', 'GitHub', 'Azure DevOps']
+      tech:['C#','.NET','.NET Core','.NET Framework','ASP.NET Web API','LINQ','Entity Framework','EF Core','SQL Server','T-SQL','PL/SQL','JavaScript','JSON','RequireJS','MVC','Git','GitHub','Azure DevOps']
     }
   },
   {
-    id: 'tl-dam',
-    period: 'Formación',
-    title: 'Desarrollo de Aplicaciones Multiplataforma (DAM)',
-    subtitle: 'Ciclo Formativo de Grado Superior',
-    short: 'Base sólida en programación, bases de datos y desarrollo multiplataforma (web, escritorio y Android).',
-    detail: {
-      desc: 'Formación en desarrollo de software multiplataforma: fundamentos de programación, modelado y gestión de bases de datos, y desarrollo de aplicaciones web, de escritorio y Android.',
-      tech: ['Java', 'Spring Boot', 'Python', 'SQL', 'MySQL', 'PL/SQL', 'XML', 'MVC', 'Android Studio', 'Git', 'GitHub']
+    id:'tl-dam',
+    period:{es:'Formación', en:'Education'},
+    title:{es:'Desarrollo de Aplicaciones Multiplataforma (DAM)', en:'Cross-Platform Application Development (DAM)'},
+    subtitle:{es:'Ciclo Formativo de Grado Superior', en:'Advanced Vocational Diploma (FP)'},
+    short:{es:'Base sólida en programación, bases de datos y desarrollo multiplataforma (web, escritorio y Android).', en:'Solid foundation in programming, databases and cross-platform development (web, desktop and Android).'},
+    detail:{
+      desc:{es:'Formación en desarrollo de software multiplataforma: fundamentos de programación, modelado y gestión de bases de datos, y desarrollo de aplicaciones web, de escritorio y Android.', en:'Training in cross-platform software development: programming fundamentals, database modeling and management, and building web, desktop and Android applications.'},
+      tech:['Java','Spring Boot','Python','SQL','MySQL','PL/SQL','XML','MVC','Android Studio','Git','GitHub']
     }
   }
 ];
 
-/* ---- tus certificaciones (apartado propio, debajo de Mi recorrido) ---- */
 const CERTS = [
-  { title: 'Gestión de Proyectos y Fundamentos de metodología Agile', issuer: 'Santander Open Academy', date: 'mar. 2025', meta: '8 h · 2 módulos', id: 'OA-2025-0325000936638', skills: ['Metodologías ágiles', 'Scrum'], desc: 'Fundamentos de la gestión de proyectos y de las metodologías ágiles: cómo planificar y organizar un proyecto, el marco de trabajo Scrum (roles, eventos y artefactos) y la entrega iterativa de valor para adaptarse al cambio.', url: 'https://lms.santanderopenacademy.com/courses/171' },
-  { title: 'Google: Inteligencia Artificial y productividad', issuer: 'Santander Open Academy · Google', date: 'ene. 2025', meta: '2 h · 2 módulos', id: 'OA-2025-0128000769787', skills: ['Inteligencia artificial', 'Google Gemini'], desc: 'Uso de la inteligencia artificial para mejorar la productividad en el día a día: herramientas de IA generativa como Google Gemini, buenas prácticas de uso y casos prácticos para automatizar y agilizar tareas.', url: 'https://www.santanderopenacademy.com/es/courses/google-artificial-intelligence-and-productivity.html' }
+  {
+    title:{es:'Gestión de Proyectos y Fundamentos de metodología Agile', en:'Project Management and Agile Methodology Fundamentals'},
+    issuer:'Santander Open Academy',
+    date:{es:'mar. 2025', en:'Mar 2025'},
+    meta:{es:'8 h · 2 módulos', en:'8 h · 2 modules'},
+    id:'OA-2025-0325000936638',
+    skills:[{es:'Metodologías ágiles',en:'Agile methodologies'},{es:'Scrum',en:'Scrum'}],
+    desc:{es:'Fundamentos de la gestión de proyectos y de las metodologías ágiles: cómo planificar y organizar un proyecto, el marco de trabajo Scrum (roles, eventos y artefactos) y la entrega iterativa de valor para adaptarse al cambio.', en:'Fundamentals of project management and agile methodologies: how to plan and organize a project, the Scrum framework (roles, events and artifacts) and iterative value delivery to adapt to change.'},
+    url:'https://lms.santanderopenacademy.com/courses/171'
+  },
+  {
+    title:{es:'Google: Inteligencia Artificial y productividad', en:'Google: Artificial Intelligence and Productivity'},
+    issuer:'Santander Open Academy · Google',
+    date:{es:'ene. 2025', en:'Jan 2025'},
+    meta:{es:'2 h · 2 módulos', en:'2 h · 2 modules'},
+    id:'OA-2025-0128000769787',
+    skills:[{es:'Inteligencia artificial',en:'Artificial intelligence'},{es:'Google Gemini',en:'Google Gemini'}],
+    desc:{es:'Uso de la inteligencia artificial para mejorar la productividad en el día a día: herramientas de IA generativa como Google Gemini, buenas prácticas de uso y casos prácticos para automatizar y agilizar tareas.', en:'Using artificial intelligence to improve day-to-day productivity: generative AI tools like Google Gemini, best practices and practical use cases to automate and speed up tasks.'},
+    url:'https://www.santanderopenacademy.com/es/courses/google-artificial-intelligence-and-productivity.html'
+  }
 ];
 
-/* ===================== LÓGICA (no hace falta tocar) ===================== */
+/* ===================== I18N + LÓGICA ===================== */
 const root = document.getElementById('pf-root');
 const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+let lang = (function(){ try{ return localStorage.getItem('pf-lang') || 'es'; }catch(e){ return 'es'; } })();
+function L(v){ return (v && typeof v === 'object' && !Array.isArray(v) && ('es' in v)) ? (v[lang] || v.es) : v; }
+
+const UI = {
+  es:{ featured:'destacado', viewProject:'ver proyecto ↗', details:'ver detalle →', code:'código ↗', viewCourse:'ver curso ↗', hFeatures:'// características', hStack:'// stack', hSkills:'// aptitudes', hResp:'// responsabilidades', hTech:'// tecnologías', hCreds:'// credenciales', credId:'ID de credencial ·', idLabel:'ID ·', more:'+ más proyectos en camino' },
+  en:{ featured:'featured', viewProject:'view project ↗', details:'details →', code:'code ↗', viewCourse:'view course ↗', hFeatures:'// features', hStack:'// stack', hSkills:'// skills', hResp:'// responsibilities', hTech:'// tech', hCreds:'// credentials', credId:'credential ID ·', idLabel:'ID ·', more:'+ more projects coming' }
+};
+function u(k){ return UI[lang][k]; }
+
+function applyI18n(l){
+  document.querySelectorAll('[data-en]').forEach(el => {
+    if(el.dataset.esOrig === undefined) el.dataset.esOrig = el.textContent;
+    el.textContent = (l === 'en') ? el.getAttribute('data-en') : el.dataset.esOrig;
+  });
+}
 
 /* ---- chips ---- */
 function chip(t){
@@ -489,28 +498,28 @@ function schip(t){
   return '<span class="stack-chip" style="font-family:\'JetBrains Mono\',monospace;font-size:11px;padding:5px 9px;border:1px solid var(--border);border-radius:7px;color:var(--muted);background:var(--surface2)">'+t+'</span>';
 }
 
-/* ---- animaciones de proyecto (según p.art) ---- */
-function artFor(p){ return p.art === 'trycert' ? CERT_ANIM : p.art === 'mailcraft' ? MAIL_ANIM : p.art === 'sforge' ? SFORGE_ANIM : ''; }
-function artClass(p){ return p.art === 'trycert' ? 'tc-art' : p.art === 'mailcraft' ? 'mc-art' : p.art === 'sforge' ? 'sf-art' : ''; }
+/* ---- animaciones de proyecto ---- */
+function artFor(p){ return p.art === 'trycert' ? CERT_ANIM : p.art === 'sforge' ? sforgeAnim() : ''; }
+function artClass(p){ return p.art === 'trycert' ? 'tc-art' : p.art === 'sforge' ? 'sf-art' : ''; }
 
 /* ---- proyecto destacado ---- */
 function renderFeatured(p){
   const art = p.art
     ? `<div class="featured-art ${artClass(p)}" style="min-height:300px">${artFor(p)}</div>`
-    : `<div class="featured-art" style="position:relative;background:var(--surface2);min-height:280px;background-image:repeating-linear-gradient(135deg,var(--border) 0,var(--border) 1px,transparent 1px,transparent 13px);display:flex;align-items:center;justify-content:center"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);background:var(--surface);padding:8px 14px;border-radius:8px;border:1px solid var(--border)">[ captura del producto ]</span></div>`;
+    : `<div class="featured-art" style="position:relative;background:var(--surface2);min-height:280px;background-image:repeating-linear-gradient(135deg,var(--border) 0,var(--border) 1px,transparent 1px,transparent 13px);display:flex;align-items:center;justify-content:center"></div>`;
   document.getElementById('featured').innerHTML = `
     <article class="featured featured-grid" data-proj-id="${p.id}" style="background:var(--surface);border:1px solid var(--border);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1.05fr 1fr;gap:0;margin-bottom:18px">
       <div style="padding:38px 40px;display:flex;flex-direction:column;gap:18px">
         <div style="display:flex;align-items:center;justify-content:space-between">
-          <div style="display:flex;align-items:center;gap:14px"><div style="width:48px;height:48px;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;color:#fff;font-size:16px">${p.mono}</div><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">destacado · ${p.year}</div></div>
-          <div style="display:flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:12px;color:${p.statusColor}"><span style="width:8px;height:8px;border-radius:50%;background:${p.statusColor}"></span>${p.status}</div>
+          <div style="display:flex;align-items:center;gap:14px"><div style="width:48px;height:48px;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;color:#fff;font-size:16px">${p.mono}</div><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">${u('featured')} · ${p.year}</div></div>
+          <div style="display:flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:12px;color:${p.statusColor}"><span style="width:8px;height:8px;border-radius:50%;background:${p.statusColor}"></span>${L(p.status)}</div>
         </div>
         <h3 style="font-size:30px;font-weight:600;letter-spacing:-.02em;margin:4px 0 0">${p.name}</h3>
-        <p style="font-size:16px;line-height:1.6;color:var(--muted);margin:0">${p.tagline}</p>
+        <p style="font-size:16px;line-height:1.6;color:var(--muted);margin:0">${L(p.tagline)}</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:2px">${p.tags.map(tag).join('')}</div>
         <div style="display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:18px">
-          ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="btn-open">ver proyecto ↗</a>` : ''}
-          <span class="btn-detail">ver detalle →</span>
+          ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="btn-open">${u('viewProject')}</a>` : ''}
+          <span class="btn-detail">${u('details')}</span>
         </div>
       </div>
       ${art}
@@ -522,13 +531,14 @@ function compactCard(p){
   return `<article class="proj" data-proj-id="${p.id}" style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:15px">
       <div style="display:flex;align-items:center;justify-content:space-between">
         <div style="width:42px;height:42px;border-radius:12px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--accent);font-size:14px">${p.mono}</div>
-        <div style="display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)"><span style="width:7px;height:7px;border-radius:50%;background:${p.statusColor}"></span>${p.status}</div>
+        <div style="display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)"><span style="width:7px;height:7px;border-radius:50%;background:${p.statusColor}"></span>${L(p.status)}</div>
       </div>
       <h3 style="font-size:21px;font-weight:600;letter-spacing:-.015em;margin:2px 0 0">${p.name}</h3>
-      <p style="font-size:14.5px;line-height:1.55;color:var(--muted);margin:0;flex:1">${p.tagline}</p>
+      <p style="font-size:14.5px;line-height:1.55;color:var(--muted);margin:0;flex:1">${L(p.tagline)}</p>
       <div style="display:flex;gap:7px;flex-wrap:wrap">${p.tags.map(schip).join('')}</div>
       <div style="display:flex;align-items:center;gap:10px;border-top:1px solid var(--border);padding-top:14px">
-        <span class="btn-detail">ver detalle →</span>
+        ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="btn-open">${u('viewProject')}</a>` : ''}
+        <span class="btn-detail">${u('details')}</span>
       </div>
     </article>`;
 }
@@ -537,15 +547,15 @@ function wideCard(p){
       <div style="padding:30px 32px;display:flex;flex-direction:column;gap:13px">
         <div style="display:flex;align-items:center;justify-content:space-between">
           <div style="display:flex;align-items:center;gap:12px"><div style="width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;color:#fff;font-size:15px">${p.mono}</div><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">${p.year}</div></div>
-          <div style="display:flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:12px;color:${p.statusColor}"><span style="width:8px;height:8px;border-radius:50%;background:${p.statusColor}"></span>${p.status}</div>
+          <div style="display:flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:12px;color:${p.statusColor}"><span style="width:8px;height:8px;border-radius:50%;background:${p.statusColor}"></span>${L(p.status)}</div>
         </div>
         <h3 style="font-size:24px;font-weight:600;letter-spacing:-.015em;margin:2px 0 0">${p.name}</h3>
-        <p style="font-size:15px;line-height:1.55;color:var(--muted);margin:0">${p.tagline}</p>
+        <p style="font-size:15px;line-height:1.55;color:var(--muted);margin:0">${L(p.tagline)}</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap">${p.tags.map(schip).join('')}</div>
         <div style="display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:16px">
-         ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="btn-open">ver proyecto ↗</a>` : ''}
-         ${p.github ? `<a href="${p.github}" target="_blank" rel="noopener" class="btn-detail" style="text-decoration:none">código ↗</a>` : ''}
-         <span class="btn-detail">ver detalle →</span>
+         ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener" class="btn-open">${u('viewProject')}</a>` : ''}
+         ${p.github ? `<a href="${p.github}" target="_blank" rel="noopener" class="btn-detail" style="text-decoration:none">${u('code')}</a>` : ''}
+         <span class="btn-detail">${u('details')}</span>
         </div>
       </div>
       <div class="featured-art ${artClass(p)}" style="min-height:250px">${artFor(p)}</div>
@@ -554,10 +564,7 @@ function wideCard(p){
 function renderOthers(list){
   const grid = document.getElementById('others-grid');
   if(!list.length){
-    grid.innerHTML = `
-      <div style="grid-column:1 / -1;border:1px dashed var(--border);border-radius:20px;padding:38px;display:flex;align-items:center;justify-content:center;text-align:center">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--muted);line-height:1.6">+ más proyectos en camino<br><span style="font-size:12px;opacity:.7"></span></div>
-      </div>`;
+    grid.innerHTML = `<div style="grid-column:1 / -1;border:1px dashed var(--border);border-radius:20px;padding:38px;display:flex;align-items:center;justify-content:center;text-align:center"><div style="font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--muted);line-height:1.6">${u('more')}</div></div>`;
     return;
   }
   grid.innerHTML = list.map(p => p.art ? wideCard(p) : compactCard(p)).join('');
@@ -568,33 +575,21 @@ const modal = document.getElementById('modal');
 const modalCard = document.getElementById('modal-card');
 let lastFocus = null;
 
-/* ---- timeline + modal de detalle ---- */
 const dmodal = document.getElementById('dmodal');
 const dmodalCard = document.getElementById('dmodal-card');
-const tlSec = (l) => `<div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;margin:26px 0 14px">// ${l}</div>`;
-function tlCert(c){
-  return `<div style="border:1px solid var(--border);border-radius:14px;padding:18px;background:var(--surface2)">
-    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
-      <div><div style="font-size:16px;font-weight:600;line-height:1.3">${c.title}</div><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-top:5px">${c.issuer} · ${c.date}${c.meta ? ' · ' + c.meta : ''}</div></div>
-      ${c.url ? `<a href="${c.url}" target="_blank" rel="noopener" class="mlink" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);text-decoration:none;white-space:nowrap;border:1px solid var(--border);padding:7px 11px;border-radius:9px">ver curso ↗</a>` : ''}
-    </div>
-    ${c.skills && c.skills.length ? `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:13px">${c.skills.map(chip).join('')}</div>` : ''}
-    ${c.id ? `<div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);margin-top:13px;opacity:.75">ID · ${c.id}</div>` : ''}
-  </div>`;
-}
+const tlSec = (l) => `<div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;margin:26px 0 14px">${l}</div>`;
+
 function renderTimeline(){
   const host = document.getElementById('timeline');
   host.innerHTML = TIMELINE.map((e, i) => {
     const dot = i === 0 ? 'background:var(--accent)' : 'background:var(--surface);border:2px solid var(--accent)';
-    let btn = '';
-    if(e.detail) btn = `<button class="tl-btn" data-detail-id="${e.id}" style="margin-top:13px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);background:none;border:1px solid var(--border);border-radius:9px;padding:7px 13px;cursor:pointer">ver detalle →</button>`;
-    else if(e.anchor) btn = `<a href="${e.anchor}" class="tl-btn" style="display:inline-block;margin-top:13px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);text-decoration:none;border:1px solid var(--border);border-radius:9px;padding:7px 13px">${e.anchorLabel} →</a>`;
+    const btn = e.detail ? `<button class="tl-btn" data-detail-id="${e.id}" style="margin-top:13px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);background:none;border:1px solid var(--border);border-radius:9px;padding:7px 13px;cursor:pointer">${u('details')}</button>` : '';
     return `<div data-reveal="${i * 55}" style="position:relative;padding-bottom:34px">
       <div style="position:absolute;left:-34px;top:3px;width:16px;height:16px;border-radius:50%;${dot};box-shadow:0 0 0 5px var(--bg)"></div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:6px">${e.period}</div>
-      <div style="font-size:19px;font-weight:600;margin-bottom:4px">${e.title}</div>
-      ${e.subtitle ? `<div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:7px">${e.subtitle}</div>` : ''}
-      <div style="font-size:15px;color:var(--muted);line-height:1.55;max-width:560px">${e.short}</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:6px">${L(e.period)}</div>
+      <div style="font-size:19px;font-weight:600;margin-bottom:4px">${L(e.title)}</div>
+      ${e.subtitle ? `<div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:7px">${L(e.subtitle)}</div>` : ''}
+      <div style="font-size:15px;color:var(--muted);line-height:1.55;max-width:560px">${L(e.short)}</div>
       ${btn}
     </div>`;
   }).join('');
@@ -603,14 +598,14 @@ function certCardHTML(c, i){
   return `<article class="certcard" data-cert-id="${i}" style="border:1px solid var(--border);border-radius:16px;padding:22px;background:var(--surface);display:flex;flex-direction:column;gap:12px">
     <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
       <div style="width:40px;height:40px;border-radius:11px;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.2L7 21l5-2.2 5 2.2-1.5-7.8"/></svg></div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)">${c.date}</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)">${L(c.date)}</div>
     </div>
-    <div style="font-size:16.5px;font-weight:600;line-height:1.3">${c.title}</div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">${c.issuer}${c.meta ? ' · ' + c.meta : ''}</div>
-    <div style="display:flex;flex-wrap:wrap;gap:6px">${c.skills.map(schip).join('')}</div>
+    <div style="font-size:16.5px;font-weight:600;line-height:1.3">${L(c.title)}</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">${c.issuer}${c.meta ? ' · ' + L(c.meta) : ''}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px">${c.skills.map(s => schip(L(s))).join('')}</div>
     <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:13px;margin-top:2px">
-      <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);opacity:.75">ID · ${c.id}</span>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);font-weight:500">ver detalle →</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);opacity:.75">${u('idLabel')} ${c.id}</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);font-weight:500">${u('details')}</span>
     </div>
   </article>`;
 }
@@ -623,14 +618,14 @@ function openCert(i){
     <div style="padding:34px 36px 38px">
       <div style="display:flex;align-items:center;gap:14px">
         <div style="width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.2L7 21l5-2.2 5 2.2-1.5-7.8"/></svg></div>
-        <div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:.06em;text-transform:uppercase">${c.issuer}</div><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-top:3px">${c.date}${c.meta ? ' · ' + c.meta : ''}</div></div>
+        <div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:.06em;text-transform:uppercase">${c.issuer}</div><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-top:3px">${L(c.date)}${c.meta ? ' · ' + L(c.meta) : ''}</div></div>
       </div>
-      <h3 style="font-size:24px;font-weight:700;letter-spacing:-.015em;line-height:1.2;margin:20px 0 0;padding-right:20px">${c.title}</h3>
-      <p style="font-size:15.5px;line-height:1.7;color:var(--text);margin:16px 0 0">${c.desc}</p>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;margin:28px 0 14px">// aptitudes</div>
-      <div style="display:flex;flex-wrap:wrap;gap:7px">${c.skills.map(schip).join('')}</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);margin-top:24px;opacity:.8">ID de credencial · ${c.id}</div>
-      ${c.url ? `<div style="margin-top:26px"><a href="${c.url}" target="_blank" rel="noopener" class="mlink" style="font-family:'JetBrains Mono',monospace;font-size:14px;padding:12px 20px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:500;display:inline-block">ver curso ↗</a></div>` : ''}
+      <h3 style="font-size:24px;font-weight:700;letter-spacing:-.015em;line-height:1.2;margin:20px 0 0;padding-right:20px">${L(c.title)}</h3>
+      <p style="font-size:15.5px;line-height:1.7;color:var(--text);margin:16px 0 0">${L(c.desc)}</p>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;margin:28px 0 14px">${u('hSkills')}</div>
+      <div style="display:flex;flex-wrap:wrap;gap:7px">${c.skills.map(s => schip(L(s))).join('')}</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);margin-top:24px;opacity:.8">${u('credId')} ${c.id}</div>
+      ${c.url ? `<div style="margin-top:26px"><a href="${c.url}" target="_blank" rel="noopener" class="mlink" style="font-family:'JetBrains Mono',monospace;font-size:14px;padding:12px 20px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:500;display:inline-block">${u('viewCourse')}</a></div>` : ''}
     </div>`;
   dmodal.style.display = 'flex';
   dmodalCard.style.animation = reduce ? 'none' : 'modalIn .32s cubic-bezier(.16,1,.3,1)';
@@ -649,16 +644,15 @@ function openDetail(id){
   lastFocus = document.activeElement;
   const d = e.detail;
   let body = '';
-  if(d.desc) body += `<p style="font-size:15.5px;line-height:1.7;color:var(--text);margin:0">${d.desc}</p>`;
-  if(d.bullets) body += tlSec('responsabilidades') + `<div style="display:grid;gap:10px">${d.bullets.map(b => `<div style="display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--text);line-height:1.45"><span style="color:var(--accent);font-family:'JetBrains Mono',monospace">▸</span>${b}</div>`).join('')}</div>`;
-  if(d.tech) body += tlSec('tecnologías') + `<div style="display:flex;flex-wrap:wrap;gap:7px">${d.tech.map(schip).join('')}</div>`;
-  if(d.certs) body += tlSec('credenciales') + d.certs.map(tlCert).join('');
+  if(d.desc) body += `<p style="font-size:15.5px;line-height:1.7;color:var(--text);margin:0">${L(d.desc)}</p>`;
+  if(d.bullets) body += tlSec(u('hResp')) + `<div style="display:grid;gap:10px">${d.bullets.map(b => `<div style="display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--text);line-height:1.45"><span style="color:var(--accent);font-family:'JetBrains Mono',monospace">▸</span>${L(b)}</div>`).join('')}</div>`;
+  if(d.tech) body += tlSec(u('hTech')) + `<div style="display:flex;flex-wrap:wrap;gap:7px">${d.tech.map(schip).join('')}</div>`;
   dmodalCard.innerHTML = `
     <button id="dmodal-close" class="closebtn" aria-label="Cerrar" style="position:absolute;top:18px;right:18px;width:36px;height:36px;border-radius:11px;border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:17px;z-index:5">✕</button>
     <div style="padding:34px 36px 38px">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:.04em">${e.period}</div>
-      <h3 style="font-size:26px;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin:11px 0 4px;padding-right:30px">${e.title}</h3>
-      ${e.subtitle ? `<div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">${e.subtitle}</div>` : ''}
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:.04em">${L(e.period)}</div>
+      <h3 style="font-size:26px;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin:11px 0 4px;padding-right:30px">${L(e.title)}</h3>
+      ${e.subtitle ? `<div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)">${L(e.subtitle)}</div>` : ''}
       <div style="margin-top:22px">${body}</div>
     </div>`;
   dmodal.style.display = 'flex';
@@ -679,34 +673,34 @@ function openModal(id){
   if(!p) return;
   lastFocus = document.activeElement;
 
-  const feats = p.features.map(f => `<div style="display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--text);line-height:1.45"><span style="color:var(--accent);font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span>${f}</div>`).join('');
+  const feats = p.features.map(f => `<div style="display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--text);line-height:1.45"><span style="color:var(--accent);font-family:'JetBrains Mono',monospace;flex-shrink:0">▸</span>${L(f)}</div>`).join('');
   const stackHtml = p.stack.map(g => `
     <div style="display:flex;gap:16px;align-items:baseline;flex-wrap:wrap">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);width:110px;flex-shrink:0">${g.label}</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);width:110px;flex-shrink:0">${L(g.label)}</div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;flex:1">${g.items.map(it => `<span class="stack-chip" style="font-family:'JetBrains Mono',monospace;font-size:12px;padding:6px 11px;border:1px solid var(--border);border-radius:8px;color:var(--text);background:var(--surface2)">${it}</span>`).join('')}</div>
     </div>`).join('');
 
   let links = '';
-  if(p.demo)   links += `<a href="${p.demo}" target="_blank" rel="noopener" class="mlink" style="font-family:'JetBrains Mono',monospace;font-size:14px;padding:13px 22px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:500">ver proyecto ↗</a>`;
-  if(p.github) links += `<a href="${p.github}" target="_blank" rel="noopener" class="mlink" style="font-family:'JetBrains Mono',monospace;font-size:14px;padding:13px 22px;border-radius:12px;background:var(--surface2);color:var(--text);text-decoration:none;font-weight:500;border:1px solid var(--border)">código ↗</a>`;
+  if(p.demo)   links += `<a href="${p.demo}" target="_blank" rel="noopener" class="mlink" style="font-family:'JetBrains Mono',monospace;font-size:14px;padding:13px 22px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:500">${u('viewProject')}</a>`;
+  if(p.github) links += `<a href="${p.github}" target="_blank" rel="noopener" class="mlink" style="font-family:'JetBrains Mono',monospace;font-size:14px;padding:13px 22px;border-radius:12px;background:var(--surface2);color:var(--text);text-decoration:none;font-weight:500;border:1px solid var(--border)">${u('code')}</a>`;
 
   const header = p.art
     ? `<div class="${artClass(p)}" style="position:relative;height:250px;display:flex;align-items:center;justify-content:center">${artFor(p)}<button id="modal-close" class="closebtn" aria-label="Cerrar" style="position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:11px;border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;z-index:10">✕</button></div>`
-    : `<div style="position:relative;height:180px;background:var(--surface2);background-image:repeating-linear-gradient(135deg,var(--border) 0,var(--border) 1px,transparent 1px,transparent 14px);display:flex;align-items:center;justify-content:center"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);background:var(--surface);padding:8px 14px;border-radius:8px;border:1px solid var(--border)">[ captura · ${p.name} ]</span><button id="modal-close" class="closebtn" aria-label="Cerrar" style="position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:11px;border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;z-index:10">✕</button></div>`;
+    : `<div style="position:relative;height:120px;background:var(--surface2)"><button id="modal-close" class="closebtn" aria-label="Cerrar" style="position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:11px;border:1px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;z-index:10">✕</button></div>`;
   modalCard.innerHTML = `
     ${header}
     <div style="padding:34px 38px 40px">
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
         <div style="display:flex;align-items:center;gap:14px">
           <div style="width:50px;height:50px;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;color:#fff;font-size:16px">${p.mono}</div>
-          <div><h3 style="font-size:28px;font-weight:600;letter-spacing:-.02em;margin:0">${p.name}</h3><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-top:2px">${p.year} · ${p.role}</div></div>
+          <div><h3 style="font-size:28px;font-weight:600;letter-spacing:-.02em;margin:0">${p.name}</h3><div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-top:2px">${p.year} · ${L(p.role)}</div></div>
         </div>
-        <div style="display:flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:12px;color:${p.statusColor};border:1px solid var(--border);padding:7px 13px;border-radius:9px"><span style="width:8px;height:8px;border-radius:50%;background:${p.statusColor}"></span>${p.status}</div>
+        <div style="display:flex;align-items:center;gap:7px;font-family:'JetBrains Mono',monospace;font-size:12px;color:${p.statusColor};border:1px solid var(--border);padding:7px 13px;border-radius:9px"><span style="width:8px;height:8px;border-radius:50%;background:${p.statusColor}"></span>${L(p.status)}</div>
       </div>
-      <p style="font-size:16px;line-height:1.7;color:var(--text);margin:24px 0 0">${p.desc}</p>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;margin:30px 0 16px">// características</div>
+      <p style="font-size:16px;line-height:1.7;color:var(--text);margin:24px 0 0">${L(p.desc)}</p>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;margin:30px 0 16px">${u('hFeatures')}</div>
       <div class="feat-grid2" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">${feats}</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;margin:30px 0 16px">// stack</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;margin:30px 0 16px">${u('hStack')}</div>
       <div style="display:flex;flex-direction:column;gap:16px">${stackHtml}</div>
       ${links ? `<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:34px">${links}</div>` : ''}
     </div>`;
@@ -724,7 +718,7 @@ function closeModal(){
   if(lastFocus) lastFocus.focus();
 }
 document.addEventListener('click', e => {
-  if(e.target.closest('a')) return;                       // los enlaces (ver proyecto, ver curso, nav) actúan por su cuenta
+  if(e.target.closest('a')) return;
   const card = e.target.closest('[data-proj-id]');
   if(card){ openModal(card.getAttribute('data-proj-id')); return; }
   const cert = e.target.closest('[data-cert-id]');
@@ -748,13 +742,33 @@ function setTheme(t){ root.setAttribute('data-theme', t); themebtn.innerHTML = (
 themebtn.addEventListener('click', () => setTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light'));
 (function(){ let t = 'dark'; try{ const s = localStorage.getItem('pf-theme'); if(s) t = s; }catch(e){} setTheme(t); })();
 
+/* ---- idioma ---- */
+const langbtn = document.getElementById('langbtn');
+function renderAll(){
+  renderFeatured(PROJECTS[0]);
+  renderOthers(PROJECTS.slice(1));
+  renderTimeline();
+  renderCerts();
+}
+function setLang(l){
+  lang = l;
+  try{ localStorage.setItem('pf-lang', l); }catch(e){}
+  document.documentElement.lang = l;
+  langbtn.textContent = (l === 'es') ? 'EN' : 'ES';
+  applyI18n(l);
+  renderAll();
+  if(!reduce) typeTerminal();
+}
+langbtn.addEventListener('click', () => setLang(lang === 'es' ? 'en' : 'es'));
+
 /* ---- email (copiar) ---- */
 const emailbtn = document.getElementById('emailbtn');
 emailbtn.addEventListener('click', () => {
   const email = 'manuel.garcia.rodriguez.010@gmail.com';
   try{ navigator.clipboard.writeText(email); }catch(e){}
-  emailbtn.textContent = '✓ copiado';
-  setTimeout(() => { emailbtn.textContent = email; }, 1600);
+  const original = email;
+  emailbtn.textContent = (lang === 'es') ? '✓ copiado' : '✓ copied';
+  setTimeout(() => { emailbtn.textContent = original; }, 1600);
 });
 
 /* ---- reveal al hacer scroll ---- */
@@ -790,31 +804,44 @@ function setupCounters(){
   els.forEach(el => io.observe(el));
 }
 
-/* ---- terminal animada ---- */
+/* ---- terminal animada (bilingüe) ---- */
+let termTimers = [];
 function typeTerminal(){
   const el = document.getElementById('pf-term');
   if(!el) return;
-  const lines = [
-    { p:'$ ', t:'whoami' },
-    { o:'manuel garcía · desarrollador .net' },
-    { p:'$ ', t:'cat especialidad.txt' },
-    { o:'del código a producción · C# / .NET / SQL / Docker / CI/CD' },
-    { p:'$ ', t:'cat disponibilidad.txt' },
-    { o:'abierto a nuevas oportunidades ▍' }
-  ];
-  el.innerHTML = ''; let li = 0; const timers = [];
+  termTimers.forEach(clearTimeout); termTimers = [];
+  const LINES = {
+    es:[
+      { p:'$ ', t:'whoami' },
+      { o:'manuel garcía · desarrollador .net' },
+      { p:'$ ', t:'cat especialidad.txt' },
+      { o:'del código a producción · C# / .NET / SQL / Docker / CI/CD' },
+      { p:'$ ', t:'cat disponibilidad.txt' },
+      { o:'abierto a nuevas oportunidades ▍' }
+    ],
+    en:[
+      { p:'$ ', t:'whoami' },
+      { o:'manuel garcia · .net developer' },
+      { p:'$ ', t:'cat skills.txt' },
+      { o:'from code to production · C# / .NET / SQL / Docker / CI/CD' },
+      { p:'$ ', t:'cat availability.txt' },
+      { o:'open to new opportunities ▍' }
+    ]
+  };
+  const lines = LINES[lang];
+  el.innerHTML = ''; let li = 0;
   const nl = () => {
     if(li >= lines.length) return;
     const line = lines[li];
     const row = document.createElement('div'); row.style.whiteSpace = 'pre-wrap'; el.appendChild(row);
-    if(line.o !== undefined){ row.style.color = 'var(--muted)'; row.textContent = '  ' + line.o; li++; timers.push(setTimeout(nl, 440)); return; }
+    if(line.o !== undefined){ row.style.color = 'var(--muted)'; row.textContent = '  ' + line.o; li++; termTimers.push(setTimeout(nl, 440)); return; }
     const prompt = document.createElement('span'); prompt.style.color = 'var(--accent)'; prompt.textContent = line.p; row.appendChild(prompt);
     const span = document.createElement('span'); row.appendChild(span);
     let ci = 0;
-    const tc = () => { span.textContent = line.t.slice(0, ci); ci++; if(ci <= line.t.length){ timers.push(setTimeout(tc, 55)); } else { li++; timers.push(setTimeout(nl, 280)); } };
+    const tc = () => { span.textContent = line.t.slice(0, ci); ci++; if(ci <= line.t.length){ termTimers.push(setTimeout(tc, 55)); } else { li++; termTimers.push(setTimeout(nl, 280)); } };
     tc();
   };
-  timers.push(setTimeout(nl, 600));
+  termTimers.push(setTimeout(nl, 600));
 }
 
 /* ---- glow del hero que sigue al ratón ---- */
@@ -827,10 +854,10 @@ function heroGlow(){
 }
 
 /* ---- init ---- */
-renderFeatured(PROJECTS[0]);
-renderOthers(PROJECTS.slice(1));
-renderTimeline();
-renderCerts();
+document.documentElement.lang = lang;
+langbtn.textContent = (lang === 'es') ? 'EN' : 'ES';
+applyI18n(lang);
+renderAll();
 setupReveal();
 setupCounters();
 if(!reduce){ typeTerminal(); heroGlow(); }
