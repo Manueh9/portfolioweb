@@ -194,7 +194,7 @@
             </div>
             <h1 style="font-size:clamp(38px,5.4vw,64px);font-weight:700;letter-spacing:-.03em;line-height:1.02;margin:0"><span data-en="Hi, I'm">Hola, soy</span> <span style="background:linear-gradient(110deg,var(--accent),var(--accent2),var(--accent));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:gradMove 4s linear infinite">Manuel García</span></h1>
             <p style="font-family:'JetBrains Mono',monospace;font-size:15px;color:var(--accent);margin:16px 0 0;letter-spacing:-.01em" data-en="> .NET Developer · from code to production">&gt; Desarrollador .NET · del código a producción</p>
-            <p style="font-size:17px;line-height:1.6;color:var(--muted);max-width:480px;margin:14px 0 0" data-en="A .NET developer focused on the back-end and on shipping code to production. I build, deploy and operate applications —C#, .NET, SQL Server, Docker and CI/CD— and I'm specializing in Cloud/DevOps.">Desarrollador .NET centrado en Back-End y en llevar el código a producción. Construyo, despliego y opero aplicaciones —C#, .NET, SQL Server, Docker y CI/CD— y me especializo en Cloud/DevOps.</p>
+            <p style="font-size:17px;line-height:1.6;color:var(--muted);max-width:480px;margin:14px 0 0" data-en="A .NET developer focused on the back-end and on shipping code to production. I'm the technical lead in Spain for a B2B industrial maintenance platform used by more than 100 companies. I build, deploy and operate applications —C#, .NET, SQL Server, Docker and CI/CD— and I'm specializing in Cloud/DevOps.">Desarrollador .NET centrado en Back-End y en llevar el código a producción. Responsable técnico en España de una plataforma B2B de mantenimiento industrial con más de 100 empresas usuarias. Construyo, despliego y opero aplicaciones —C#, .NET, SQL Server, Docker y CI/CD— y me especializo en Cloud/DevOps.</p>
           </div>
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px">
             <a href="#proyectos" class="btnp" style="font-family:'JetBrains Mono',monospace;font-size:14px;padding:13px 22px;border-radius:12px;background:var(--accent);color:#fff;text-decoration:none;font-weight:500" data-en="view projects →">ver proyectos →</a>
@@ -213,13 +213,13 @@
         </div>
 
         <div class="hero-cell" data-reveal="140" style="grid-column:span 2;background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:center">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:44px;font-weight:700;color:var(--text);line-height:1"><span data-count="2" data-suffix="+">2+</span></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:44px;font-weight:700;color:var(--text);line-height:1"><span data-count="3">3</span></div>
           <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted);margin-top:8px" data-en="years of experience">años de experiencia</div>
         </div>
 
         <div class="hero-cell" data-reveal="200" style="grid-column:span 2;background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:center">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:30px;font-weight:700;color:var(--text);line-height:1.1;letter-spacing:-.02em">Full-Stack</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted);margin-top:8px" data-en="from code to production">del código a producción</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:44px;font-weight:700;color:var(--text);line-height:1"><span data-count="100" data-prefix="+">+100</span></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted);margin-top:8px" data-en="companies use the product I maintain">empresas usan el producto que mantengo</div>
         </div>
 
         <div class="hero-cell" data-reveal="260" style="grid-column:span 2;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:22px;padding:24px;display:flex;flex-direction:column;justify-content:center;color:#fff">
@@ -317,13 +317,13 @@
 const PROJECTS = [
   {
     id:'trycert', art:'trycert', name:'trycert', mono:'TC', year:'2026',
-    tagline:{es:'Certificados verificables como servicio: PDF con código QR y página de verificación pública. API-first.', en:'Verifiable certificates as a service: PDF with a QR code and a public verification page. API-first.'},
-    desc:{es:'trycert es un servicio web que permite a academias, bootcamps y creadores de cursos emitir certificados en PDF que cualquiera puede verificar. Cada certificado lleva un identificador único, un código QR y una página de verificación pública. Es «API-first»: además del panel web, expone una API para emitir certificados automáticamente cuando un alumno termina un curso.', en:'trycert is a web service that lets academies, bootcamps and course creators issue PDF certificates that anyone can verify. Each certificate carries a unique ID, a QR code and a public verification page. It is "API-first": beyond the web panel, it exposes an API to issue certificates automatically when a student finishes a course.'},
+    tagline:{es:'Proyecto personal en producción: emisión de certificados PDF con QR y verificación pública, sobre .NET 10 e infraestructura propia.', en:'Personal project in production: PDF certificate issuing with QR and public verification, on .NET 10 and self-hosted infrastructure.'},
+    desc:{es:'Proyecto personal en producción sobre infraestructura propia. Emite certificados en PDF con identificador único, código QR y una página pública de verificación. Es API-first: además del panel web, expone una API REST para emitir certificados de forma automática. La parte con más trabajo no es la aplicación, sino la operación: contenedores, proxy inverso, HTTPS de extremo a extremo, CI/CD con tests y despliegues sin downtime mediante healthchecks.', en:'Personal project running in production on self-hosted infrastructure. It issues PDF certificates with a unique ID, a QR code and a public verification page. It is API-first: beyond the web panel, it exposes a REST API to issue certificates automatically. The heaviest part is not the application but the operations: containers, reverse proxy, end-to-end HTTPS, CI/CD with tests and zero-downtime deployments via healthchecks.'},
     status:{es:'En producción', en:'In production'},
     statusColor:'#34d399',
     metric:'Live', metricLabel:'trycert.com',
     tags:['.NET 10','C#','EF Core','Docker','Caddy'],
-    role:{es:'creador · full-stack & infra', en:'creator · full-stack & infra'},
+    role:{es:'proyecto personal · full-stack & infra', en:'personal project · full-stack & infra'},
     demo:'https://trycert.com', github:'',
     features:[
       {es:'Certificados en PDF con identificador único y código QR', en:'PDF certificates with a unique ID and QR code'},
@@ -416,19 +416,20 @@ const TIMELINE = [
   {
     id:'tl-job',
     period:{es:'2023 — actualidad', en:'2023 — present'},
-    title:{es:'Programador Web Full-Stack', en:'Full-Stack Web Developer'},
-    subtitle:{es:'Sistemas de Publicaciones Informáticas · Sant Cugat del Vallès (híbrido)', en:'Sistemas de Publicaciones Informáticas · Sant Cugat del Vallès (hybrid)'},
-    short:{es:'Back-End y bases de datos en una aplicación en producción: lógica de servidor en C#/.NET, cliente en JavaScript y datos en SQL Server.', en:'Back-end and databases on a production application: server-side logic in C#/.NET, client in JavaScript and data in SQL Server.'},
+    title:{es:'Desarrollador .NET', en:'.NET Developer'},
+    subtitle:{es:'GMAOLinx · Sant Cugat del Vallès (híbrido)', en:'GMAOLinx · Sant Cugat del Vallès (hybrid)'},
+    short:{es:'Responsable técnico en España de una plataforma B2B de mantenimiento industrial con más de 100 empresas usuarias: desarrollo en C#/.NET, datos en SQL Server e implantación en el entorno del cliente.', en:'Technical lead in Spain for a B2B industrial maintenance platform used by more than 100 companies: development in C#/.NET, data in SQL Server and deployment at the customer site.'},
     detail:{
-      desc:{es:'Desarrollador Web Full-Stack con una sólida especialización en Back-End y bases de datos, enfocado en optimizar el rendimiento, la seguridad y la escalabilidad de la aplicación. Trabajo en su desarrollo y mantenimiento: lógica de servidor eficiente en C#, funcionalidad de cliente y comunicación con el servidor en JavaScript, y gestión de datos en SQL Server (vistas, procedimientos y funciones).', en:"Full-Stack Web Developer with a strong specialization in back-end and databases, focused on optimizing the application's performance, security and scalability. I work on its development and maintenance: efficient server-side logic in C#, client-side functionality and server communication in JavaScript, and data management in SQL Server (views, procedures and functions)."},
+      desc:{es:'Cubro desde España las incidencias y el desarrollo de una plataforma B2B de mantenimiento industrial, junto a un equipo internacional. El trabajo recorre el problema entero: análisis, resolución en el código o en la base de datos, y entrega al cliente. También llevo las migraciones de base de datos y la implantación del producto desde cero en el entorno del cliente.', en:'From Spain I cover incidents and development for a B2B industrial maintenance platform, alongside an international team. The work spans the whole problem: analysis, resolution in the code or in the database, and delivery to the customer. I also handle database migrations and deploying the product from scratch in the customer environment.'},
       bullets:[
-        {es:'Arquitectura Back-End: diseño e implementación de soluciones escalables y seguras', en:'Back-end architecture: design and implementation of scalable, secure solutions'},
-        {es:'Optimización de bases de datos: vistas, procedimientos almacenados y funciones', en:'Database optimization: views, stored procedures and functions'},
-        {es:'Patrón MVC y principios SOLID para un código limpio y mantenible', en:'MVC pattern and SOLID principles for clean, maintainable code'},
-        {es:'Manejo de peticiones y tratamiento de los datos del servidor', en:'Handling requests and processing server data'},
-        {es:'Resolución de problemas complejos en Back-End y Front-End', en:'Solving complex problems on back-end and front-end'}
+        {es:'Desarrollo backend en C# / .NET / ASP.NET: análisis de la incidencia, cambio en el código y entrega', en:'Back-end development in C# / .NET / ASP.NET: incident analysis, code change and delivery'},
+        {es:'SQL Server: vistas, procedimientos y funciones; optimización de consultas y corrección de datos en producción', en:'SQL Server: views, procedures and functions; query optimization and data fixes in production'},
+        {es:'Migraciones de base de datos e implantación del producto desde cero en el entorno del cliente', en:'Database migrations and deploying the product from scratch in the customer environment'},
+        {es:'Diagnóstico transversal: resolución de extremo a extremo, desde el código hasta el entorno donde corre la aplicación', en:'Cross-cutting diagnosis: end-to-end resolution, from the code to the environment where the app runs'},
+        {es:'Diseño e implementación de APIs REST y lógica de negocio, con patrón MVC y principios SOLID', en:'Design and implementation of REST APIs and business logic, with MVC and SOLID principles'},
+        {es:'Git y Azure DevOps bajo Scrum, con contacto directo con cliente', en:'Git and Azure DevOps under Scrum, with direct customer contact'}
       ],
-      tech:['C#','.NET','.NET Core','.NET Framework','ASP.NET Web API','LINQ','Entity Framework','EF Core','SQL Server','T-SQL','PL/SQL','JavaScript','JSON','RequireJS','MVC','Git','GitHub','Azure DevOps']
+      tech:['C#','.NET','.NET Core','.NET Framework','ASP.NET Web API','LINQ','Entity Framework','EF Core','SQL Server','T-SQL','JavaScript','JSON','MVC','SOLID','Git','Azure DevOps']
     }
   },
   {
@@ -445,6 +446,16 @@ const TIMELINE = [
 ];
 
 const CERTS = [
+  {
+    title:{es:'Developing Secure Software (LFD121)', en:'Developing Secure Software (LFD121)'},
+    issuer:'The Linux Foundation',
+    date:{es:'ago. 2026', en:'Aug 2026'},
+    meta:{es:'válida hasta ago. 2028', en:'valid until Aug 2028'},
+    id:'LF-xusgxvmwup',
+    skills:[{es:'Desarrollo seguro',en:'Secure development'},{es:'Validación de entradas',en:'Input validation'},{es:'Gestión de secretos',en:'Secrets management'}],
+    desc:{es:'Buenas prácticas de desarrollo de software seguro: principios de diseño seguro, validación de entradas, manejo de errores y secretos, uso correcto de criptografía y prevención de las vulnerabilidades más comunes en aplicaciones.', en:'Best practices for developing secure software: secure design principles, input validation, error and secret handling, correct use of cryptography and prevention of the most common application vulnerabilities.'},
+    url:''
+  },
   {
     title:{es:'Gestión de Proyectos y Fundamentos de metodología Agile', en:'Project Management and Agile Methodology Fundamentals'},
     issuer:'Santander Open Academy',
